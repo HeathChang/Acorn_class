@@ -1,0 +1,9 @@
+<!-- dependency 추가시작 부분 -->
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver Aop-->
+	<!--  Aop관련 설정-->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.9.1</version>
+		</dependency>
+<!-- dependency 추가끝 부분 -->

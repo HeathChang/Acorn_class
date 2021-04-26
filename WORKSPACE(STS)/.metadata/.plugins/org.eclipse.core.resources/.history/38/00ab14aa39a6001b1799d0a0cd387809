@@ -1,0 +1,9 @@
+package com.entity;
+
+public class ProductDTO {
+	String pcode;
+	String pname;
+	int price;
+	int quantity;
+	
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="02Day8_BeanTest9_injection2_setter(default_autowired_byType)"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(list2_property)_p"/>
+<aop-project name="03Day1_@Required"/>
+<aop-project name="01Day6_constructor_injection5_Dept_p"/>
+<aop-project name="01Day_Template"/>
+<aop-project name="02Day8_BeanTest8_injection2_setter(autowired_constructor)"/>
+<aop-project name="01Day2_package"/>
+<aop-project name="03Day3_@Resource0"/>
+<aop-project name="02Day8_BeanTest7_injection2_setter(list_autowired_byType)"/>
+<aop-project name="01Day5_import"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(map)"/>
+<aop-project name="04Day1_AOP3_afterReturning">
+<aspect-definition advice-class-name="com.aspect.PersonAfterAspect" advice-method-name="getInforAfterReturning(org.aspectj.lang.JoinPoint, java.lang.Object)" advice-type="AFTER_RETURNING" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/04Day1_AOP3_afterReturning/src/main/java/person.xml" pointcut-expression="execution( * getInfo(..))" proxy-target-class="false" returning="x">
+<aop-reference advice-type="AFTER_RETURNING" bean="1:BeansModel|2:04Day1_AOP3_afterReturning|3:src/main/java/person.xml|7:beans:8|8:xxx:11" bean-file="/04Day1_AOP3_afterReturning/src/main/java/person.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/04Day1_AOP3_afterReturning/src/main/java/person.xml" source="=04Day1_AOP3_afterReturning/src\/main\/java&lt;com.aspect{PersonAfterAspect.java[PersonAfterAspect~getInforAfterReturning~QJoinPoint;~QObject;" source-start-line="11" target="=04Day1_AOP3_afterReturning/src\/main\/java&lt;com.spring{Person.java[Person~getInfo" target-start-line="4"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="01Day4_multi"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(map_props)"/>
+<aop-project name="00Test08_03"/>
+<aop-project name="03Day6_ComponentScan3"/>
+<aop-project name="05_Day3_jdbc_tx_annotation">
+<aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="33" aspect-name="org.springframework.transaction.interceptor.TransactionInterceptor#05_Day3_jdbc_tx_annotation#src/main/java/dept.xml#33" aspect-start-line-number="32" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/05_Day3_jdbc_tx_annotation/src/main/java/dept.xml" pointcut-expression="(@within(org.springframework.transaction.annotation.Transactional) || @annotation(org.springframework.transaction.annotation.Transactional)) &amp;&amp; execution(* *..*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:05_Day3_jdbc_tx_annotation|3:src/main/java/dept.xml|7:beans:11|8:deptService:47" bean-file="/05_Day3_jdbc_tx_annotation/src/main/java/dept.xml" bean-start-line="47" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/05_Day3_jdbc_tx_annotation/src/main/java/dept.xml" source="=05_Day3_jdbc_tx_annotation/C:\/Users\/A\/.m2\/repository\/org\/springframework\/spring-tx\/4.3.22.RELEASE\/spring-tx-4.3.22.RELEASE.jar&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=05_Day3_jdbc_tx_annotation/src\/main\/java&lt;com.service{ProductService.java[ProductService~addOrder~QString;~I" target-start-line="17"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="05_Day2_JDBCTemplate"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(list3_util)"/>
+<aop-project name="02Day9_scope1_prototype"/>
+<aop-project name="01Day3_file"/>
+<aop-project name="03Day5_SpEL7_Collection_selection"/>
+<aop-project name="00Test08_02"/>
+<aop-project name="02Day8_BeanTest9_injection2_setter(default_autowired_byName)"/>
+<aop-project name="01Day6_constructor_injection3"/>
+<aop-project name="02Day8_BeanTest6_injection2_setter(list_autowired)"/>
+<aop-project name="03Day3_@Resource2_CoC"/>
+<aop-project name="05_Day2_JDBCTemplate2_singleRow"/>
+<aop-project name="00Test08_01"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(util)"/>
+<aop-project name="03Day6_ComponentScan1"/>
+<aop-project name="01Day6_constructor_injection4"/>
+<aop-project name="03Day7_lifecycle1_xml"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(set)"/>
+<aop-project name="02Day_BeanTest1_injection2_setter(autowire_byName)"/>
+<aop-project name="04Day1_AOP4_afterThrowing">
+<aspect-definition advice-class-name="com.aspect.PersonAfterThrowingAspect" advice-method-name="getInforAfterReturning(org.aspectj.lang.JoinPoint, java.lang.Object)" advice-type="AFTER_THROWING" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/04Day1_AOP4_afterThrowing/src/main/java/person.xml" pointcut-expression="execution( * getInfo(..))" proxy-target-class="false" throwing="x">
+<aop-reference advice-type="AFTER_THROWING" bean="1:BeansModel|2:04Day1_AOP4_afterThrowing|3:src/main/java/person.xml|7:beans:8|8:xxx:11" bean-file="/04Day1_AOP4_afterThrowing/src/main/java/person.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/04Day1_AOP4_afterThrowing/src/main/java/person.xml" source="=04Day1_AOP4_afterThrowing/src\/main\/java&lt;com.aspect{PersonAfterThrowingAspect.java[PersonAfterThrowingAspect~getInforAfterReturning~QJoinPoint;~QObject;" source-start-line="12" target="=04Day1_AOP4_afterThrowing/src\/main\/java&lt;com.spring{Person.java[Person~getInfo" target-start-line="4"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="03Day2_@Autowired5_sample"/>
+<aop-project name="05_Day1_DataSource"/>
+<aop-project name="05_Day3_jdbc_tx"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter1"/>
+<aop-project name="01Day3_resource"/>
+<aop-project name="03Day6_ComponentScan2"/>
+<aop-project name="01Day6_constructor_injection1"/>
+<aop-project name="01Day6_constructor_injection3_2_index"/>
+<aop-project name="01Day7_getBean_scope_p"/>
+<aop-project name="05_Day0_jdbc"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter2"/>
+<aop-project name="03Day7_lifecycle2_implements"/>
+<aop-project name="01Day6_constructor_injection2"/>
+<aop-project name="01Day6_constructor_injection4_1"/>
+<aop-project name="01Day7_BeanTest2_injection2_setter6(list)"/>
+<aop-project name="04Day1_AOP1_Before">
+<aspect-definition advice-class-name="com.aspect.PersonBeforeAspect" advice-method-name="mesgBefore(org.aspectj.lang.JoinPoint)" advice-type="BEFORE" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/04Day1_AOP1_Before/src/main/java/person.xml" pointcut-expression="xx()" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:04Day1_AOP1_Before|3:src/main/java/person.xml|7:beans:8|8:xxx:11" bean-file="/04Day1_AOP1_Before/src/main/java/person.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/04Day1_AOP1_Before/src/main/java/person.xml" source="=04Day1_AOP1_Before/src\/main\/java&lt;com.aspect{PersonBeforeAspect.java[PersonBeforeAspect~mesgBefore~QJoinPoint;" source-start-line="18" target="=04Day1_AOP1_Before/src\/main\/java&lt;com.spring{Person.java[Person~mesg" target-start-line="8"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.aspect.PersonBeforeAspect" advice-method-name="getInfoBefore" advice-type="BEFORE" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/04Day1_AOP1_Before/src/main/java/person.xml" pointcut-expression="execution(* getInfo(..))" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:04Day1_AOP1_Before|3:src/main/java/person.xml|7:beans:8|8:xxx:11" bean-file="/04Day1_AOP1_Before/src/main/java/person.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/04Day1_AOP1_Before/src/main/java/person.xml" source="=04Day1_AOP1_Before/src\/main\/java&lt;com.aspect{PersonBeforeAspect.java[PersonBeforeAspect~getInfoBefore" source-start-line="26" target="=04Day1_AOP1_Before/src\/main\/java&lt;com.spring{Person.java[Person~getInfo" target-start-line="4"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="01Day7_BeanTest2_injection2_setter3"/>
+<aop-project name="04Day1_AOP5_around">
+<aspect-definition advice-class-name="com.aspect.PersonAroundAspect" advice-method-name="getInfoAround(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/04Day1_AOP5_around/src/main/java/person.xml" pointcut-expression="execution( * getInfo(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:04Day1_AOP5_around|3:src/main/java/person.xml|7:beans:8|8:xxx:11" bean-file="/04Day1_AOP5_around/src/main/java/person.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/04Day1_AOP5_around/src/main/java/person.xml" source="=04Day1_AOP5_around/src\/main\/java&lt;com.aspect{PersonAroundAspect.java[PersonAroundAspect~getInfoAround~QProceedingJoinPoint;" source-start-line="11" target="=04Day1_AOP5_around/src\/main\/java&lt;com.spring{Person.java[Person~getInfo" target-start-line="4"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="05_Day2_JDBCTemplate_SR_error"/>
+<aop-project name="01Day6_constructor_injection5_Dept_setter"/>
+<aop-project name="01Day_test_1"/>
+<aop-project name="03Day7_lifecycle3_annotation"/>
+</aop-reference-model>

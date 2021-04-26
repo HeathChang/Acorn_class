@@ -1,0 +1,19 @@
+package com.service;
+
+import java.util.List;
+
+import com.dao.DeptDAO;
+
+public class DeptService {
+	public DeptDAO dao;
+	public DeptService() { 
+		this.dao=dao;
+	}
+	public List<String>getList(){
+		return dao.getList();
+	}
+	
+	
+
+	
+}

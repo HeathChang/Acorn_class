@@ -1,0 +1,48 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.dao.DeptDAO;
+
+public class DeptService {
+	@Autowired
+	public DeptDAO dao;
+
+	public DeptService(DeptDAO dao) {
+		System.out.println("DeptService DAO 생성자 호출됨");
+		this.dao = dao;
+	}
+	
+	
+	
+	public DeptDAO getDao() {
+		return dao;
+	}
+
+
+
+
+
+
+	public DeptService() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public void setDao(DeptDAO dao) {
+		System.out.println("DeptService DAO set함수 호출됨");
+		this.dao = dao;
+	}
+
+
+
+	public List<String> getList() {
+		return dao.getList();
+	}
+
+	
+}

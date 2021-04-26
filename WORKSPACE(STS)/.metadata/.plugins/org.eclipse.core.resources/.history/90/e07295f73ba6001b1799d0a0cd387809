@@ -1,0 +1,26 @@
+package com.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class ProductDAO {
+	JdbcTemplate jdbcTemplate; //set함수 통해 주입
+	
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	public void addOrder(String pcode, int quantity) {
+		String sql="insert into t_order (num,pcode,quantity) values (t_order_sql.nextval,?,?)";
+		int n =jdbcTemplate.update(sql,pcode,quantity);
+		//오더테이블 insert후
+		
+		String sql2 ="up t_product set quantity =quantity-?, where pcode=?";
+		int n2=jdbcTemplate.update(sql2,quantity,pcode);
+		
+	}
+
+}

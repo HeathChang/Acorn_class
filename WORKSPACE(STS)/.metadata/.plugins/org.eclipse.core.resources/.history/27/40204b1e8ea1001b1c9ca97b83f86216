@@ -1,0 +1,12 @@
+package com.spring;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Person {
+	@Value("홍길동")
+	String username;
+	@Value("10")
+	int age;
+
+}
+	

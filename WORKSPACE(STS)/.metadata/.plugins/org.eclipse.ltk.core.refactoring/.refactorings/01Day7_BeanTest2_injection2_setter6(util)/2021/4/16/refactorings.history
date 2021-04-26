@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;stu.xml&apos; to &apos;01Day7_BeanTest2_injection2_setter6(set)/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;01Day7_BeanTest2_injection2_setter6(util)&apos;&#x0D;&#x0A;- Destination element: &apos;01Day7_BeanTest2_injection2_setter6(set)/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;stu.xml&apos;" description="Copy file" destination="=01Day7_BeanTest2_injection2_setter6\(set)/src\/main\/java" element1="src/main/java/stu.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1618541983095" units="0" version="1.0"/>
+</session>

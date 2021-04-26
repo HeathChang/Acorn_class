@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class ProductTest {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("Test.xml");
+		ProductService service  = ctx.getBean("deptService", ProductService.class);
+		ArrayList<TestDTO> list = dao.select();
+		int num=dao.insert(27, "하울", "성");
+		System.out.println(num);
+		for (TestDTO s : list) {
+			System.out.println(s);
+		}
+
+	}
+}

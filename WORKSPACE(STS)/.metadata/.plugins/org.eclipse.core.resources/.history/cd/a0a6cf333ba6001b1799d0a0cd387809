@@ -1,0 +1,10 @@
+package com.dao;
+
+public class ProductDAO {
+
+	public void addOrder(String pcode, int quantity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

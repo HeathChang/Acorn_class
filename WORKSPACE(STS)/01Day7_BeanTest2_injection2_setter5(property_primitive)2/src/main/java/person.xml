@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="catBean" class="com.spring.Cat" p:catName="냥양"
+		p:catAge="2">
+	</bean>
+	<bean id="dogBean" class="com.spring.Dog" p:dogName="멍군"
+		p:dogAge="3">
+	</bean>
+
+
+	<bean id="one" class="com.spring.Person" 
+		 p:cat-ref="catBean" p:dog-ref="dogBean">
+		<property name="username">
+			<value>홍길동</value>
+		</property>
+		
+		<property name="age">
+			<value>30</value>
+		</property>
+	</bean>
+
+</beans>

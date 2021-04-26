@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="xxx" class="com.spring.Person">
+	<constructor-arg name="x" value="유관순"></constructor-arg> 
+	<!-- Person xxx = new Person ("홍길동") -->
+</bean>
+
+<bean id="xxx2" class="com.spring.Person">
+	<constructor-arg name="x" value="유관순"></constructor-arg> 
+	<constructor-arg name="y" value="이순신"></constructor-arg> 
+</bean>
+
+<bean id="xxx3" class="com.spring.Person">
+	<constructor-arg name="xx" value="머선"></constructor-arg> 
+	<constructor-arg name="yy" value="129"></constructor-arg> 
+	<!--자동으로 오토 언박싱 , 항상 [" "]  -->
+</bean>
+
+
+</beans>

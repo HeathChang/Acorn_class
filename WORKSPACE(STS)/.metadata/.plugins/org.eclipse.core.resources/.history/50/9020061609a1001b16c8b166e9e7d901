@@ -1,0 +1,11 @@
+package com.spring;
+
+public class Person {
+	String username;
+	int age;
+	Cat cat;
+	Dog dog;
+	
+	
+	
+}

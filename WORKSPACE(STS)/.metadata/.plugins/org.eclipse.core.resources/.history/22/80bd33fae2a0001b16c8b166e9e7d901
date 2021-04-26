@@ -1,0 +1,14 @@
+package com.dto;
+
+import java.util.Set;
+
+public class Student {
+	private String name;
+	private int age;
+	public Student() {
+		System.out.println("기본 생성자 호출");
+		super();
+	}
+	
+	
+}

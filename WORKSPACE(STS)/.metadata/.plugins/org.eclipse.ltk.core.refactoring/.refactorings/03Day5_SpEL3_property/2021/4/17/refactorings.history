@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Cat.java&apos; to &apos;03Day5_SpEL7_Collection_selection/src/main/java/com.spring&apos;&#x0D;&#x0A;- Original project: &apos;03Day5_SpEL3_property&apos;&#x0D;&#x0A;- Destination element: &apos;03Day5_SpEL7_Collection_selection/src/main/java/com.spring&apos;&#x0D;&#x0A;- Original element: &apos;com.spring.Cat.java&apos;" description="Copy compilation unit" destination="=03Day5_SpEL7_Collection_selection/src\/main\/java&lt;com.spring" element1="/src\/main\/java&lt;com.spring{Cat.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1618976624313" units="1" version="1.0"/>
+</session>

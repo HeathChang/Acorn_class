@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<context:annotation-config></context:annotation-config>
+	<context:property-placeholder location="com/config/jdbc.properties" />
+	<bean id="myDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+	 <property name="driverClassName" value="${jdbc.driver}"></property>
+	 <property name="url" value="${jdbc.url}"></property>
+	 <property name="username" value="${jdbc.userid}"></property>
+	 <property name="password" value="${jdbc.passwd}"></property>
+	 <!--관련 내용: https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html  -->
+	 <!--관련 내용:즉 DB와 관계된 connection 정보를 담고 있으며, bean으로 등록하여 인자로 넘겨준다.  -->
+	</bean>
+	<!--필요빈 생성  -->
+	<bean id="dao" class="com.dao.TestDAO"> 
+		<constructor-arg name="dataSource" ref="myDataSource"> </constructor-arg>
+	</bean>
+</beans>

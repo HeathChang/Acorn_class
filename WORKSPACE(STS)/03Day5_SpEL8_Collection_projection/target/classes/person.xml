@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+<!--util,p check  -->
+<context:annotation-config></context:annotation-config>
+
+<bean id="pet01" class="com.spring.Cat" p:catName="일" p:catAge="1"></bean>
+<bean id="pet02" class="com.spring.Cat" p:catName="둘이" p:catAge="2"></bean>
+<bean id="pet03" class="com.spring.Cat" p:catName="셋쓰리" p:catAge="3"></bean>
+<bean id="pet04" class="com.spring.Cat" p:catName="사넷포이" p:catAge="4"></bean>
+<bean id="pet05" class="com.spring.Cat" p:catName="오파이브이" p:catAge="5"></bean>
+
+<util:list id="pets">  <!--list에 add  -->
+	<ref bean="pet01"/>
+	<ref bean="pet02"/>
+	<ref bean="pet03"/>
+	<ref bean="pet04"/>
+	<ref bean="pet05"/>
+</util:list>
+
+
+
+<bean id="onePerson1" class="com.spring.Person">
+	<property name="username" value="홍길동1"></property> 
+	<property name="age" value="1"></property> 
+	<!--spEL을 사용한 데이터 선별작업 후 설정  -->
+	<property name="catNames" value="#{pets.![catName]}"></property>
+	<property name="catAges" value="#{pets.![catAge]}"></property>
+</bean>
+
+
+<bean id="onePerson2" class="com.spring.Person">
+	<property name="username" value="홍길동"></property> 
+	<property name="age" value="2"></property> 
+	<!--spEL을 사용한 데이터 선별작업 후 설정  -->
+	<property name="catNames" value="#{pets.![catName]}"></property>
+	<property name="catAges" value="#{pets.![catAge+ ' ' +catName]}"></property> <!--고양이 나이 + 고양이 이름  -->
+</bean>
+
+ <bean id="onePerson3" class="com.spring.Person">
+	<property name="username" value="홍길동3"></property> 
+	<property name="age" value="3"></property> 
+<!-- 	spEL을 사용한 데이터 선별작업 후 설정  -->
+	<property name="catNames" value="#{pets.?[catAge>2].![catName]}"></property> <!--나이가 2살보다 많은 고양이  -->
+	<property name="catAges" value="#{pets.?[catAge>2].![catAge+ ' ' +catName]}"></property> <!--위 조건에 충족하는 고양이 나이+ 고양이 이름   -->
+</bean>
+
+
+
+</beans>

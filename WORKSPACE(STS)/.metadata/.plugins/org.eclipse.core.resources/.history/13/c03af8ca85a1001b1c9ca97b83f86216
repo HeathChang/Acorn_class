@@ -1,0 +1,20 @@
+import java.util.List;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.service.DeptOracleService;
+
+public class DeptMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("com/config/config.xml");
+		DeptOracleService service = ctx.getBean("deptService", DeptService.class);
+		List<String> list = service.getList();
+		for (String s : list) {
+			System.out.println(s);
+		}
+
+	}
+
+}

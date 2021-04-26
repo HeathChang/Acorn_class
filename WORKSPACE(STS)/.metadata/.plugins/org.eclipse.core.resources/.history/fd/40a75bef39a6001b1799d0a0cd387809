@@ -1,0 +1,10 @@
+package com.service;
+
+import com.dao.ProductDAO;
+
+public class ProductService {
+	ProductDAO dao; //set통해서 주입 
+	@Transactional // tx 처리함 . 필요함수 위에 붙여줌 
+	
+	
+}

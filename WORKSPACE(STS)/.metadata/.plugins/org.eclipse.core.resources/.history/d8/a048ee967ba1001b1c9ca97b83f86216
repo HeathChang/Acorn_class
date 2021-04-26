@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<bean id="pet01" class="com.spring.Cat">
+	<property name="catName" value="냐옹"></property>
+	<property name="catAge" value="2"></property>
+	
+	</bean>
+
+
+	<bean id="onePerson1" class="com.spring.Person">
+		<property name="username" value="장덕배"></property>
+		<!--\Cat\은 AutoWired 자동주입  -->
+
+	</bean>
+
+	
+	
+
+
+</beans>

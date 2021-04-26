@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;05_Day2_JDBCTemplate/JDBC 오라클 드라이버추가부분&apos; to &apos;JDBC Oracle Driver &amp;&amp; JDBC TEMPLATE&apos;" description="Rename resource &apos;JDBC 오라클 드라이버추가부분&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="JDBC 오라클 드라이버추가부분" name="JDBC Oracle Driver &amp;&amp; JDBC TEMPLATE" stamp="1619397849840" updateReferences="true"/>
+</session>

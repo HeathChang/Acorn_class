@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byType">
+
+	<!--primary:"true"가 부여되면 Type이 같아도 상관없음, 다만 id는 달라야함. -->
+	<bean id="xx" class="com.spring.Cat" p:catName="냥양1" p:catAge="1"
+		autowire-candidate="false"> 
+		<!--후보에서 탈락,안나옴.   -->
+	</bean>
+
+
+	<bean id="yy" class="com.spring.Cat" p:catName="냥양2" p:catAge="2">
+	</bean>
+
+
+
+	<bean id="one" class="com.spring.Person">
+		<property name="username" value="홍길동"></property>
+	</bean>
+
+
+	<!--autowire: byName -->
+</beans>
