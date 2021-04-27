@@ -107,6 +107,8 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\A\Desktop\allAboutMe\portpolio\Acorn\Acorn_class\Acorn_class\05_Day7_tx_annotation_mybatis"/>
+			<item value="C:\Users\A\Desktop\allAboutMe\portpolio\Acorn\Acorn_class\Acorn_class\05_Day6_mybatis"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\05_Day2_JDBCTemplate2_singleRow"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\05_Day2_JDBCTemplate"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\03Day6_ComponentScan3"/>

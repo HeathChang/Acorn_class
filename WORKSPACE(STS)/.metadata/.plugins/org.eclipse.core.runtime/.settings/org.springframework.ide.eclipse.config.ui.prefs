@@ -112,5 +112,7 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/05_Day3_jdbc_tx/src/main/java/Test.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/05_Day3_jdbc_tx_annotation/src/main/java/Test.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/05_Day3_jdbc_tx_annotation/src/main/java/dept.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/05_Day6_mybatis/src/main/java/com/config/dept.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/05_Day7_tx_annotation_myBatis/src/main/java/com/config/product.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage id\="com.springsource.sts.config.ui.editors.namespaces" index\="0" kind\="formPage"/>
 com.springsource.config.ui.prefs.tabs.dialog=always
 eclipse.preferences.version=1
