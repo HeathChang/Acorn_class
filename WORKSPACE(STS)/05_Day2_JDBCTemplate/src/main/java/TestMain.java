@@ -20,15 +20,6 @@ public class TestMain {
 		  
 		  
 		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
 		  System.out.println("===================");
 		  List<TestDTO> list2= dao.selectByName("홍길동");
 		  

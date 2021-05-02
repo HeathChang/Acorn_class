@@ -102,11 +102,19 @@
 		<item value="org.springsource.sts.package:3.9.11.201912161153-RELEASE-e412"/>
 		<item value="org.springsource.sts:3.9.11.201912161153-RELEASE"/>
 	</list>
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\A\Desktop\allAboutMe\portfolio\Acorn\Acorn_class\Acorn_class\WORKSPACE(STS)"/>
+	</list>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\07Day2_MVC2_parameter2_Array"/>
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\07Day1_MVC_parameter"/>
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\06Day8_MVC8_config_initParam3"/>
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\06Day8_MVC8_config_initParam2"/>
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\06Day8_MVC8_config_initParam"/>
 			<item value="C:\Users\A\Desktop\allAboutMe\portpolio\Acorn\Acorn_class\Acorn_class\05_Day7_tx_annotation_mybatis"/>
 			<item value="C:\Users\A\Desktop\allAboutMe\portpolio\Acorn\Acorn_class\Acorn_class\05_Day6_mybatis"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\05_Day2_JDBCTemplate2_singleRow"/>

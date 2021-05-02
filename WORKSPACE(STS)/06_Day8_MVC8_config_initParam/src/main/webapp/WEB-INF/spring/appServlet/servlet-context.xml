@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+<beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<beans:bean
+	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
-		<beans:property name="suffix" value=".jsp" />
-	</beans:bean>
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
 
-	<beans:bean id="testService" class="com.controller.TestService" />
-		
-	<beans:bean id="person" class="com.controller.Person">
-		<constructor-arg name="x" value="쿠키">
-		<constructor-arg name="y" value="7">
-	</beans:bean>
+	<bean id="testService" class="com.controller.TestService" />
 
-	<beans:bean id="testController" class="com.controller.TestController">
-	  <property name="anotherBean" ref="testService"/>
-	  <property name="anotherBean" ref="person"/>
-	 </beans:bean>
+	<bean id="person" class="com.controller.Person">
+		<constructor-arg name="name" value="쿠키">
+		</constructor-arg>
+		<constructor-arg name="age" value="7">
+		</constructor-arg>
+	</bean>
 
-</beans:beans>
+	<bean id="test" class="com.controller.TestController">
+		<property name="service" ref="testService" />
+		<property name="person" ref="person" />
+	</bean>
+
+</beans>
