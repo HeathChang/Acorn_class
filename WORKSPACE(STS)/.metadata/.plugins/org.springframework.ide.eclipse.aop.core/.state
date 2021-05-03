@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="07Day4_MVC4_parameter4"/>
 <aop-project name="07Day1_MVC_Parameter-e"/>
-<aop-project name="06_Day4_MVC6_@RequestMapping_method"/>
+<aop-project name="07Day4_MVC4_Parameter"/>
 <aop-project name="MVC_TEST2"/>
+<aop-project name="06_Day4_MVC6_@RequestMapping_method"/>
 <aop-project name="05_Day6_mybatis2"/>
+<aop-project name="07Day5_MVC_returnType"/>
 <aop-project name="06_Day3_MVC4_multi"/>
 <aop-project name="06_Day8_MVC8_config_initParam-e"/>
 <aop-project name="05_Day2_JDBCTemplate2_singleRow"/>
@@ -15,16 +18,21 @@
 </aop-project>
 <aop-project name="06_Day8_MVC8_config_initParam3-e"/>
 <aop-project name="MVC_TEST"/>
+<aop-project name="07Day4_MVC4_parameter3"/>
+<aop-project name="07Day4_MVC5_session"/>
 <aop-project name="05_Day1_DataSource"/>
 <aop-project name="05_Day3_jdbc_tx"/>
 <aop-project name="06Day8_MVC8_config_initParam2"/>
 <aop-project name="07Day3_MVC3_Header"/>
 <aop-project name="07Day2_MVC2_parameter2_Array"/>
+<aop-project name="07Day4_MVC_Cookie"/>
 <aop-project name="06_Day4_MVC7_@RequestMapping3_ClassLevel"/>
+<aop-project name="07Day4_MVC4_Parameter2-e"/>
 <aop-project name="06_Day4_MVC5_InternalResourceViewResolver"/>
 <aop-project name="06_Day1_MVC_basic"/>
 <aop-project name="07Day1_MVC_parameter"/>
 <aop-project name="05_Day0_jdbc"/>
+<aop-project name="07Day4_MVC4_parameter5_Map_Model"/>
 <aop-project name="06_Day4_MVC6_@RequestMapping2_params"/>
 <aop-project name="05_Day6_mybatis"/>
 <aop-project name="06Day8_MVC8_config_initParam3"/>

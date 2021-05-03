@@ -1,0 +1,15 @@
+1. LoginTestProject
+1-1 한글처리 web.xml
+1-2 main.jsp -> 로그인링크 /login-> loginForm.jsp
+2-1 loginForm.jsp  post방식을 로그인데이터 전송  /login
+    데이터 파싱 session에 저장 후 logined.jsp 이동
+3-1 logined.jsp에서 session정보 추출 화면에 띄우기
+    로그아웃 /logout -> 세션정보 삭제 후 main.jsp 로 redirect
+  
+추가 : main.jsp ->/member(get방식) memberForm.jsp 
+	/member(post방식 )id, pass입력 후 session에 정보저장
+     ->main.jsp로 리다이렉트 -> /login -> loginForm.jsp 에서
+      로그인시  session에 저장된 id 맞는지 확인 후 logined.jsp로 이동, 아닌 경우
+      loginForm.jsp로 이동 
+      콘솔에 id일치 하지 않음 메세지출력
+      이후 3-1 작업 동일
