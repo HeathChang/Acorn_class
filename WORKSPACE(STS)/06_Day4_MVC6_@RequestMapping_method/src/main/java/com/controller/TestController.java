@@ -9,12 +9,12 @@ public class TestController {
 
 	@RequestMapping(value = "/login",method = RequestMethod.GET)
 	public String loginForm() {
-		System.out.println("get 요청");
+		System.out.println("get 요청~");
 		return "loginForm";
 	}
 	@RequestMapping(value = "/login",method = RequestMethod.POST)
 	public String login() {
-		System.out.println("Post 요청");
+		System.out.println("Post 요청~");
 		return "login";
 	}
 	

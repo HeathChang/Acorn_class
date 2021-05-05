@@ -110,6 +110,8 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\08Day4_MVC_HandlerInterceptorAdapter3"/>
+			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\08Day4_MVC_HandlerInterceptorAdapter1"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\07Day4_session_exam"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\07Day4_MVC4_parameter2"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\07Day2_MVC2_parameter2_Array"/>
