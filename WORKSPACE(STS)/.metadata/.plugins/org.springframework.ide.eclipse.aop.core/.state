@@ -15,11 +15,15 @@
 </aspect-definition>
 </aop-project>
 <aop-project name="07Day4_MVC5_session"/>
+<aop-project name="09Day5_MVC_jSON_@ResponseBody"/>
+<aop-project name="08Day5_MVC_mvc_namespace_resouce"/>
 <aop-project name="08Day2_MVC_URLMapping"/>
 <aop-project name="08Day4_MVC_HandlerInterceptorAdapter1"/>
 <aop-project name="07Day2_MVC2_parameter2_Array"/>
+<aop-project name="07Day4_MVC4_parameter2"/>
 <aop-project name="06_Day4_MVC7_@RequestMapping3_ClassLevel"/>
 <aop-project name="06_Day4_MVC5_InternalResourceViewResolver"/>
+<aop-project name="09Day6_MVC_JSON_RestFul_Method"/>
 <aop-project name="06_Day4_MVC6_@RequestMapping2_params"/>
 <aop-project name="05_Day6_mybatis"/>
 <aop-project name="06Day8_MVC8_config_initParam3"/>
@@ -33,7 +37,6 @@
 <aop-project name="06Day8_MVC8_config_initParam"/>
 <aop-project name="08Day1_MVC_Exception"/>
 <aop-project name="07Day4_MVC4_parameter4"/>
-<aop-project name="08Day4_MVC_HandlerInterceptorAdapter-e"/>
 <aop-project name="06_Day4_MVC6_@RequestMapping_method"/>
 <aop-project name="07Day5_MVC_returnType"/>
 <aop-project name="07Day4_session_exam"/>
@@ -42,23 +45,26 @@
 <aop-project name="06_Day8_MVC8_config_initParam3-e"/>
 <aop-project name="07Day4_MVC4_parameter3"/>
 <aop-project name="MVC_TEST"/>
-<aop-project name="08Day4_MVC_HandlerInterceptorAdapter3-e"/>
 <aop-project name="05_Day1_DataSource"/>
 <aop-project name="05_Day3_jdbc_tx"/>
 <aop-project name="06Day8_MVC8_config_initParam2"/>
 <aop-project name="07Day3_MVC3_Header"/>
 <aop-project name="07Day4_MVC_Cookie"/>
+<aop-project name="Spring_MVC_myBatis_sample"/>
 <aop-project name="07Day4_MVC4_Parameter2-e"/>
+<aop-project name="09Day7_MVC_JSON_@PathVairable"/>
 <aop-project name="06_Day1_MVC_basic"/>
 <aop-project name="07Day1_MVC_parameter"/>
 <aop-project name="05_Day0_jdbc"/>
 <aop-project name="07Day4_MVC4_parameter5_Map_Model"/>
 <aop-project name="08Day1_MVC_Exception2"/>
-<aop-project name="08Day5_MVC_namespace_resource"/>
+<aop-project name="09Day3_MVC_jSON_@ResponseBody_@RestController2_@ResponseEntity"/>
 <aop-project name="05_Day2_JDBCTemplate_SR_error"/>
 <aop-project name="04Day1_AOP5_around">
 <aspect-definition advice-class-name="com.aspect.PersonAroundAspect" advice-method-name="getInfoAround(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/04Day1_AOP5_around/src/main/java/person.xml" pointcut-expression="execution( * getInfo(..))" proxy-target-class="false">
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:04Day1_AOP5_around|3:src/main/java/person.xml|7:beans:8|8:xxx:11" bean-file="/04Day1_AOP5_around/src/main/java/person.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/04Day1_AOP5_around/src/main/java/person.xml" source="=04Day1_AOP5_around/src\/main\/java&lt;com.aspect{PersonAroundAspect.java[PersonAroundAspect~getInfoAround~QProceedingJoinPoint;" source-start-line="11" target="=04Day1_AOP5_around/src\/main\/java&lt;com.spring{Person.java[Person~getInfo" target-start-line="4"/>
 </aspect-definition>
 </aop-project>
+<aop-project name="08Day4_MVC_HandlerInterceptorAdapter3"/>
+<aop-project name="09Day_MVC_jSON2_@RequestBody"/>
 </aop-reference-model>
