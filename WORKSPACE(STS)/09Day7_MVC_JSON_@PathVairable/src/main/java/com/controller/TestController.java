@@ -23,9 +23,6 @@ public class TestController {
 		return "main";//main.jsp
 	}
 	
-	
-	
-	
 	@RequestMapping(value="/board/name/{xxx}", method = RequestMethod.GET)
 	public String aaa(@PathVariable("xxx") String name) {
 		System.out.println("aaa @PathVariable(\"xxx\")=="+ name);

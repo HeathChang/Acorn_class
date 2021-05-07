@@ -20,8 +20,8 @@ public class TestController {
 		Login login= new Login("윤동주","20");
 		ResponseEntity<Login>entity= ResponseEntity.status(200).body(login);
 		return entity;
-		
 	}
+	
 	@RequestMapping("/aaa") // 주소요청 && 위에 RestController 있기 때문에, @ResponseBody없어도됨
 	public  Login aaa() { //비동기 처리 // 문자열을 뷰페이지가 아닌, body 통해서 보내줌
 		Login login= new Login();
@@ -29,6 +29,7 @@ public class TestController {
 		login.setPasswd("1234");
 		return login;
 	}
+	
 	@RequestMapping("/bbb") // 주소요청 && @ResponseBody없어도됨
 	public  ArrayList<Login> bbb() { //비동기 처리 // 문자열을 뷰페이지가 아닌, body 통해서 보내줌
 		ArrayList<Login> list = new ArrayList<Login>();

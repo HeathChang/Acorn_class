@@ -111,6 +111,7 @@
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\Spring_MVC_myBatis_sample"/>
+			<item value="C:\Users\A\Desktop\allAboutMe\portfolio\Acorn\Acorn_class\Acorn_class\WORKSPACE(MALL)\ShopMiniSpringProject_02_login&amp;register"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\09Day7_MVC_JSON_@PathVairable"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\09Day_MVC_jSON2_@RequestBody_chul"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\08Day5_MVC_mvc_namespace_resouce"/>
@@ -129,7 +130,6 @@
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\05_Day2_JDBCTemplate"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\03Day6_ComponentScan3"/>
 			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\01Day2_package_chul"/>
-			<item value="C:\Users\A\Desktop\ACORN\Spring\프로젝트\01Day_Template"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
