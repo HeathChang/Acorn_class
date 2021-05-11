@@ -13,6 +13,11 @@
 <mvc:view-controller path="/memberForm" view-name="memberForm"/><!--memberForm.jsp  -->
 <mvc:view-controller path="/loginForm" view-name="loginForm"/><!-- loginForm .jsp-->
 <mvc:view-controller path="/myPage" view-name="mypage"/><!-- mypage.jsp -->
+
+<!--  -->
+<mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
+<mvc:resources location="/WEB-INF/views/csss/" mapping="/css/**"/>
+<mvc:resources location="/WEB-INF/views/js/" mapping="/js/**"/>
 <!-- interceptor의 사용 -->
 <mvc:interceptors>
 	<mvc:interceptor>

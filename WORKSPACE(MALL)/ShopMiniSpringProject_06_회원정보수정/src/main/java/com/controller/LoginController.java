@@ -22,7 +22,8 @@ MemberSerivce service;
 public String logout(HttpSession session) {
 	session.invalidate();
 	//return "../"; //.xml에 설정 main.jsp
-	return "redirect:../"; //.xml에 설정 main.jsp ../ 을 이용하여 /loginCheck 의 상위 주소로 이동
+	return "redirect:../";
+ //.xml에 설정 main.jsp ../ 을 이용하여 /loginCheck 의 상위 주소로 이동
 	//하여 주소를 사용함
 }
 
@@ -35,7 +36,7 @@ public String login(@RequestParam Map<String, String> map, Model model, HttpSess
 	System.out.println(map);
 	if(dto!= null ) {
 		session.setAttribute("login", dto);
-		return "main";
+		return "redirect:goodsList?gCategory=top";
 	}else {
 		model.addAttribute("mesg", "아이디 또는 비번이 잘못되었습니다.");
 		return "loginForm";
