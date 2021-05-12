@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper"> <!--특정 위치 찾기 -->
+	<insert id="memberAdd" parameterType="MemberDTO">
+		insert into MEMBER
+		(userid,passwd,username,post,
+		addr1,addr2,phone1,phone2,
+		phone3,email1,email2)
+		values
+		(#{userid},#{passwd},#{username},#{post},
+		#{addr1},#{addr2},#{phone1},#{phone2},
+		#{phone3},#{email1},#{email2})
+	</insert>
+		
+	<select id="idCheck" parameterType="string" resultType="int">
+		select count(*) from Member where userid= #{userid}
+	</select>	
+	
+	<select id="login" parameterType="hashmap" resultType="MemberDTO">
+		SELECT 	userid,passwd,username,post,
+				addr1,addr2,phone1,phone2,
+				phone3,email1,email2
+		FROM MEMBER
+		WHERE USERID=#{userid} AND PASSWD=#{passwd}
+	</select>
+	<select id="mypage" parameterType="string" resultType="MemberDTO">
+		SELECT 	userid,passwd,username,post,
+				addr1,addr2,phone1,phone2,
+				phone3,email1,email2
+		FROM MEMBER
+		WHERE USERID= #{userid}
+	</select>
+	<update id="memberUpdate" parameterType="MemberDTO">
+		Update MEMBER
+		SET post=#{post},addr1=#{addr1},addr2=#{addr2},
+			phone1=#{phone1},phone2=#{phone2},phone3=#{phone3},
+			email1=#{email1},email2=#{email2}
+		where userid=#{userid}
+	</update>
+	
+	<select id="idSearch" parameterType="MemberDTO" resultType="string">
+		SELECT 	userid
+		FROM    MEMBER
+		WHERE username=#{username} and phone1=#{phone1} and
+		      phone2=#{phone2} and phone3=#{phone3}
+	</select>
+	
+	
+</mapper>

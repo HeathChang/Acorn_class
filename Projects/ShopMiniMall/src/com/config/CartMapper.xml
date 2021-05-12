@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CartMapper"> <!--특정 위치 찾기 -->
+
+	<select id="cartbyNum" parameterType="string"  resultType="CartDTO">
+	select * from CART where num =#{num}
+	</select>
+
+	
+	<insert id="cartAdd" parameterType="CartDTO" >
+	insert into CART
+	(NUM,USERID,GCODE,GNAME,GPRICE,
+	GSIZE,GCOLOR,GAMOUNT,GIMAGE)
+	values(CART_SEQ.NEXTVAL,#{userid},#{gCode},#{gName},#{gPrice},
+			#{gSize},#{gColor},#{gAmount},#{gImage}
+	)
+	</insert>
+	
+	
+	<select id="cartList" parameterType="string" resultType="CartDTO">
+		Select num,userid,gCode,gPrice,gSize,gColor,gAmount,gName,gImage 
+		from CART
+		where userid=#{userid}
+	</select>
+	
+	<delete id="cartDel" parameterType="int">
+		delete from CART where num=#{num}
+	</delete>
+	
+	<insert id="orderDone" parameterType="OrderDTO">
+		insert into orderInfo
+		(num,userid,gCode,gName,gPrice,gSize,gColor,gAmount,gImage,orderName,post
+		,addr1,addr2,phone,payMethod,ORDERDAY)
+		values
+		(orderInfo_seq.nextval, #{userid},#{gCode},#{gName},#{gPrice}
+		,#{gSize},#{gColor},#{gAmount},#{gImage},#{orderName},#{post},#{addr1}
+		,#{addr2},#{phone},#{payMethod},SYSDATE)
+ 	</insert>
+	
+
+	
+	<update id="cartUpdate" parameterType="hashmap">
+	  update CART
+	  set gAmount = #{gAmount}
+	  where num = #{num}
+	</update>
+
+	<delete id="cartAllDel" parameterType="arraylist">
+	delete from cart
+	where num 
+	IN
+	<foreach collection="list" item="item" open="(" separator="," close=")"  >
+	#{item}
+	</foreach>
+	</delete>
+	
+</mapper>
