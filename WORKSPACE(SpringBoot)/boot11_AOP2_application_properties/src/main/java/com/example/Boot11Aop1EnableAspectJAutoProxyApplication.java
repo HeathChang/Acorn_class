@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import com.example.service.TargetService;
 
 @SpringBootApplication
-@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy /////appliaction.properties에서 설정
 public class Boot11Aop1EnableAspectJAutoProxyApplication {
 
 	public static void main(String[] args) {
