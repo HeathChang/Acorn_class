@@ -22,17 +22,6 @@ public class DeptService {
 		dao.delete(88);// 에러 발생 시킴 
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public ArrayList<DeptDTO> select(){
 		return (ArrayList<DeptDTO>)dao.select();
 	}
