@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function aaa(...n){
+		console.log(n);
+		for(var a in n){
+			console.log(a);
+		}
+	}
+	aaa();
+	aaa(10);
+	aaa(10,20);
+	aaa(10,20,30,40);
+	//////////////////
+	console.log("=======");
+	function bbb(x,...n){
+		console.log(n);
+		for(var b in n){
+			console.log(b);
+		}
+	}
+	bbb(1);
+	bbb(10,20,30);
+	bbb(9,8,7,6,5);
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

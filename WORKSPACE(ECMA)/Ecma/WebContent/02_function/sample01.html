@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	aaa();
+	function aaa() {
+		console.log("aaa");
+	}
+
+	aaa(10);
+	aaa(10, 20);
+	////////////
+	//bbb(); 에러
+	var bbb = function() {
+		console.log("bbb");
+
+	}
+	bbb();
+	bbb(10);
+	bbb(10,20);
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

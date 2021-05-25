@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>객체속성: *{...}</h1>
+<div th:object="${user}">
+    <p>이름: <span th:text="*{username}">Sebastian</span></p>
+    <p>나이: <span th:text="*{age}">10</span></p>
+</div>
+<div>
+  <p>이름: <span th:text="${user.username}">Sebastian</span></p>
+  <p>나이: <span th:text="${user.age}">10</span></p>
+</div>
+</body>
+</html>
+

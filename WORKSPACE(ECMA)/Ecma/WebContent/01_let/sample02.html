@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//var 특징 호이스팅
+	//console.log(n); :let은 호이스팅 안됨으로 에러
+	let n = 100;
+	//let n =200 : 재정의 안됨. 
+	console.log(n);
+
+	if (true) {
+		let m = 30;
+	}
+	console.log(m);
+</script>
+
+</head>
+<body>
+</body>
+</html>

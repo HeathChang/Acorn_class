@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.xxx {
+	color: red;
+}
+
+.yyy {
+	color: blue;
+}
+</style>
+</head>
+<body>
+	<h1>조건 및 반복: ${...}</h1>
+	<h3>1. 조건: th:if</h3>
+	<div th:if="${user.getAge()}==20">true인 경우에만 보인다. (중괄호 밖에서 작성하면
+		thymeleaf가 처리)</div>
+	<div th:if="${user.getAge()==20}">true인 경우에만 보인다. (중괄호 안에서 작성하면
+		OGNL/SpringEL 엔진이 처리)</div>
+
+	<h3>2. 3항 연산자</h3>
+	
+	<p th:class="${user.getAge()==200}?'xxx':'yyy'">Hello</p>
+    <h3>3. switch</h3>
+	<div th:switch="${user2.username}">
+  		<p th:case="'hong'">User is an hong</p>
+ 		<p th:case="#{roles.manager}">User is a manager</p>
+  		<p th:case="*">User is some other thing(default 역할)</p>
+	</div>
+	
+	<h3>4. 반복: th:each</h3>
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+		</tr>
+		<tr th:each="user : ${userList}">
+			<td th:text="${user.username}">이름</td>
+			<td th:text="${user.age}">나이</td>
+		</tr>
+	</table>
+	
+    <h3>4. 반복: th:each, iterStat</h3>
+	 <table border="1">
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>나이</th>
+		</tr>
+		<tr th:each="user, iterStat : ${userList}">
+			<td th:text="${iterStat.index}+':'+${iterStat.count}">이름</td>
+			<td th:text="${user.username}">이름</td>
+			<td th:text="${user.age}">나이</td>
+		</tr>
+	</table>
+</body>
+</html>
+

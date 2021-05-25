@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>리터럴(literal): ${...}</h1>
+<h3>1. 문자 리터럴</h3>
+<p><span th:text="'working web application'">template file</span></p>
+<h3>2. 숫자 리터럴</h3>
+<p>The year is <span th:text="2013">1492</span>.</p>
+<p>In two years, it will be <span th:text="2013 + 2">1494</span>.</p>
+<h3>3. 불린 리터럴</h3>
+<div th:if="${user.getAge()}==20">
+   true인 경우에만 보인다. (중괄호 밖에서 작성하면 thymeleaf가 처리)
+</div>
+<div th:if="${user.getAge()==20}">
+   true인 경우에만 보인다. (중괄호 안에서 작성하면 OGNL/SpringEL 엔진이 처리)
+</div>
+<h3>4. null 리터럴</h3>
+<div th:if="${user.getUsername()} != null">
+   null 문자 사용 가능
+</div>
+
+<h3>5. 텍스트 추가  및 리터럴 대체</h3>
+<span th:text="'The name of the user is ' + ${user.username}">아무개</span><br>
+<span th:text="|The name of the user is ${user.username} Hello|">리터럴대체</span>
+</body>
+</html>
+
