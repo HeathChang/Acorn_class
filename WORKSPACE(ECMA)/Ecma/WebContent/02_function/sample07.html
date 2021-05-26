@@ -2,9 +2,49 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>람다변수 사용법</title>
 <script type="text/javascript">
-	//2.
+	//6. 매개변수 여러개, 리턴값 있음.
+	var x6 =(n,n2)=> n*n2;
+	console.log("리턴값: ",x6(10,20));
+	
+	
+	//5. 함수표현식 => arrow 함수
+	var x5= function(n){
+		return n*2;
+	}
+	var result=x5(10);
+	console.log("리턴값: ",result);
+	
+	var x5= n=> n*2; //function & {} & return 생략
+	var result2 = x5(10);
+	console.log("리턴값2: ",result2)
+
+	//4. 매개변수 & 리턴값이 있는 경우
+	var x4 = function (n){
+		console.log("함수표현식 x4 호출",n);
+		return n*2;
+	}
+	var result=x4(10);
+	console.log("리턴값: ",result)
+	var x4= n=>{
+		console.log("arrow 함수 표현식 x4 호출",n);
+		return n*2;
+	}
+	var result2=x4(10);
+	console.log("리턴값2: ",result2)
+	
+
+	//3.매개변수가 여러개인 경우,
+	var x3 = function (n,n2){
+		console.log("함수표현식 x3 호출");
+	}
+	x3(10,20);
+	
+	var x3 = (n,n2)=>{console.log("arrow 함수 x3 호출"),n,n2}
+	x3(10,20);
+	
+	//2.매개변수가 하나있는 경우.
 	var x2=(n)=> {console.log("arrow 함수 x2 호출")};
 	x2(10);
 	var x2 = n=> {console.log("arrow 함수 x2 호출")};

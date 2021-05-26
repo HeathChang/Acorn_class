@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3.new 사용자 정의 생성자 사용</title>
+<script type="text/javascript">
+	//객체 생성 3번
+	function Person(name, age, address) {
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.parent = {
+			xx : 10,
+			yy : 20
+		}
+		this.setName = function(n) {
+			this.name = n;
+		}
+		this.setAge = function(a) {
+			this.age = a;
+		}
+		this.setAddress = function(addr) {
+			this.address = addr;
+		}
+
+		//
+		this.getName = function() {
+			return this.name;
+		}
+		this.getAge = function() {
+			return this.age;
+		}
+		this.getAddress = function() {
+			return this.address;
+		}
+
+	}
+	
+	
+	var person = new Person("홍길동",20,"서울");
+	console.log(person.name+"\t"+person.getName()+"\t"+person["getName"]());
+	console.log(person.age+"\t"+person.getAge()+"\t"+person["getAge"]());
+	console.log(person.address+"\t"+person.getAddress()+"\t"+person["getAddress"]());
+	
+	console.log("=============");
+	person.setName("이순신");
+	person.setAge(30);
+	person.setAddress("전라도");
+	
+	console.log(person.name+"\t"+person.getName()+"\t"+person["getName"]());
+	console.log(person.age+"\t"+person.getAge()+"\t"+person["getAge"]());
+	console.log(person.address+"\t"+person.getAddress()+"\t"+person["getAddress"]());
+	
+	console.log("=============");
+	delete person.age;
+	delete person.setAge;
+	delete person.getAge;
+	for( var x in person){
+		console.log(x+":\t"+person[x]);
+	}
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

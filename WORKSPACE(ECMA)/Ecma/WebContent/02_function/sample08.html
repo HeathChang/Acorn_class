@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>람다변수 사용시 주의점</title>
+<script type="text/javascript">
+	console.log(this); //window 객체
+	this.num=10; //window 객체에 동적으로 추가. 
+	this.info=function(){//window 객체에 동적으로 추가. 
+		console.log("info");
+	}
+	
+	console.log(this);
+	this.info();
+	info();
+	//////////////////////////
+	this.n=1000; //window  동적으로 추가
+	var x={
+			n:100, //n이 2개
+			n2:function(){console.log("in x", this.n)}
+	}
+	x.n2();
+	//////////////////
+	var x2={
+			n:100,
+			n2:()=>{console.log("in x2", this.n)}
+			//json obj는 밖에있는 변수를 사용. (함수부분에서 => 함수부분에서 => 사용하면 안되는 이유. )
+	}
+	x2.n2();
+	
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

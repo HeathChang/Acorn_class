@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2.객체 리터럴</title>
+<script type="text/javascript">
+	//객체 생성 2번
+	var Customer = {
+		username : "홍길동",
+		Account : {
+			balance : "1000",
+			getBalance : function() {
+				return this.balance;
+			},
+		},
+		getUsername : function() {
+			return this.username;
+		}
+	};
+
+	console.log(Customer.Account.balance);
+	console.log(Customer.Account.getBalance());
+	console.log(Customer.getUsername());
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

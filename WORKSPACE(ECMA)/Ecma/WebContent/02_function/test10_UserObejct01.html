@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 Object 만들기</title>
+<script type="text/javascript">
+	//1.new Object() 이용
+	var person = new Object(); //Object 생성
+	//person.name="홍길동"; //필요한 프로퍼티 변수를 동적으로 추가
+	person["name"] = "유관순";
+	person.age = 20;
+	person.address = "서울";
+	
+	///////////////
+	//this.name은 person객체의 name이다. 만약. name 만 사용하면 window 객체에 설정됨.
+	person.setName = function(n) {this.name = n;}
+	person.setAge= function (a) {this.age=a;}
+	person.setAddress= function(addr) {this.address=addr;}
+	///////////////
+	person.getName= function() {return this.name;}
+	person.getAge= function() {return this.age;}
+	person.getAddress= function() {return this.address;}
+	
+	console.log(person.name+"\t"+person.getName());
+	console.log(person.age+"\t"+person.getAge());
+	console.log(person.address+"\t"+person.getAddress());
+	person.setName("aaaa");
+	console.log(person.getName());
+	
+	//데이터 수정
+	person.setName("이순신");
+	person.setAge(33);
+	person["setAddress"]("전라"); //person.setAddress("전라");
+	console.log(person.name+"\t"+person.getName()+"\t"+person["getName"]());
+	console.log(person.age+"\t"+person.getAge()+"\t"+person["getAge"]());
+	console.log(person.address+"\t"+person.getAddress()+"\t"+person["getAddress"]());
+	//데이터 삭제
+	delete person.age;
+	delete person.setAge;
+	delete person.getAge;
+	for( var x in person){
+		console.log(x+":\t"+person[x]);
+	}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

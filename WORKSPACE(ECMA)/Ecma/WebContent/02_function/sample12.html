@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ECMA:generator 함수:yield</title>
+<script type="text/javascript">
+	function* a(k,k2){
+		console.log("1");
+		yield k+k2; //next 시 리턴가능: {value:값 ,done:블럭값} yield 수행시 false, 수행되지 않았으면 true
+		yield "홍길동";
+		console.log("end");
+		
+	}
+	var x=a(10,20); 
+	console.log(x.next());
+	x.return(); //함수종료
+	console.log(x.next());
+	console.log(x.next());
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

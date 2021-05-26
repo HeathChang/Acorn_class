@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2.객체 리터럴</title>
+<script type="text/javascript">
+	//객체 생성 2번
+	var person = {
+		name : "홍길동",
+		"age" : 20,
+		address : "서울",
+		"setName" : function(n) {
+			this.name = n;
+		},
+		setAge : function(a) {
+			this.age = a;
+		},
+		setAddress : function(addr) {
+			this.address = addr;
+		},
+		getName : function() {
+			return this.name;
+		},
+		////////////
+		//중첩가능
+		parent : {
+			name : "홍길동아빠",
+			job : "강사",
+			getXXX : function() {
+				return person.age;
+			}
+		}
+
+	};
+
+	console.log(person.name + "\t" + person.getName());
+	console.log(person.parent.getXXX());
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

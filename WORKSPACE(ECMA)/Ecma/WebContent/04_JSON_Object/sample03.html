@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON 객체//ecma6</title>
+<script type="text/javascript">
+	var person={
+			name:"홍길동",
+			age:20,
+			getName(){return this.name},
+			setName(n){this.name=n},
+			getAge(){return this.age},
+			setAge(a){this.age=a},
+			//function() 빠져있음.
+	}
+	
+	console.log(person.name,person.age);
+	person.setName("이순신");
+	person.setAge(44);
+	console.log(">>",person.name,person.age);
+	console.log(">>",person.getName(),person.getAge());
+	
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

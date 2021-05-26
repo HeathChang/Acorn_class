@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ECMA:generator 함수</title>
+<script type="text/javascript">
+	function* aaa(){
+		console.log("1");
+		console.log("2");
+		console.log("3");
+		
+	}
+	var g=aaa(); //g변수에 generator 객체로 저장함수가 실행되지않음.
+	//aaa(); //실행 X
+	//g(); //실행 X
+	console.log(g);
+	console.log(typeof g);
+	console.log(typeof aaa);
+	g.next();
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

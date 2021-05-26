@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>destructuring</title>
+<script type="text/javascript">
+		//1. 기본:
+		var m=[10,20];
+		var [x,y]=[10,20];
+		console.log(x,y);
+		var [x1,y1]=m;
+		console.log(x1,y1);
+		///2.
+		var [k,k2,k3]=[10,20];
+		console.log(k,k2,k3);
+		var [k,k2,k3]=m;
+		console.log(k,k2,k3);
+		///3.
+		var [k,k2,k3=100]=m;
+		console.log(k,k2,k3)
+		///4.
+		var k,k2,k3;
+		[k,k2,k3]=[9,8,7]
+		console.log(k,k2,k3)
+		///5.
+		var m=[10,9,[100,200]];
+		var a,a2,a3,a4;
+		[a,a2,[a3,a4]]=m;
+		//[a,a2,a3,a4]: 이런식으로 받으면 a=10 && a2=9 && a3= [100,200] && a4= undefined로 설정 
+		console.log(a,a2,a3,a4);
+		
+		//6.swap
+		var x=10
+		var x2=20;
+		console.log("Before→ x:"+x+"\t x2:"+x2);
+		[x,x2]=[x2,x];
+		console.log("After→ x:"+x+"\t x2:"+x2);
+		
+		//7.rest연산자:packing
+		var [a,b,...c]=[9,8,7,6,5,4];
+		console.log(a,b,c);
+		
+		//8. 변수 생략
+		var [,,n]=[9,8,7];
+		console.log("8: ",n);
+		
+		//9. 함수의 파라미터 destructuring
+		function aaa(n){
+			var[k,k2]=n;
+			console.log("9번:"+k,k2);
+		}		
+		aaa([10,20]);
+		
+		//10.
+		function bbb([k,k2]){
+			console.log("10번:",k+k2)
+		}
+		bbb([10,20]);
+		//11.arrow 함수
+		var sum = function([k,k2]){
+			return k+k2
+		}
+		console.log("11번:" ,sum([10,20]));
+		
+		//
+		var sum = ([k,k2])=> k+k2;
+			console.log(sum([10,20]));
+		
+</script>
+
+
+</head>
+<body>
+</body>
+</html>
