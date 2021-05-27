@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<script type="text/javascript">
+
+	//iterable한 문자열 , 배열
+	//1. Array From : 새로운 Array객체를 생성 
+	let arr = Array.from("hello");
+	console.log(arr); //hello 배열
+	console.log(arr[0]); //h
+	
+	//2.
+	let arr2=Array.from("world",function (v,idx){
+		console.log(">> ",v,idx); //글자하나 & 인덱스값
+	})
+	
+	//3.
+	let arr3=Array.from("happy",function (v,idx){
+		console.log(">> ",v,idx); //글자하나 & 인덱스값
+		console.log("this.mesg: ",this.mesg);
+		return v+ this.mesg;
+	},{mesg:"값"});
+	console.log(arr3); //새로운 배열 생성
+	
+	//4.
+	let arr4=Array.from({0:100,1:200,length:2});
+	console.log(arr4,arr4[0],arr4[1],arr4.length);
+	console.log(Array.isArray(arr4))
+	
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

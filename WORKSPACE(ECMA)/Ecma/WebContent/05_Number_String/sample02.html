@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>추가 매서드</title>
+<script type="text/javascript">
+
+var mesg="123hello홍길동987";
+
+//includes() : 어떤 문자열의 포함여부 반환
+console.log("1: ",mesg.includes("123"));//t
+console.log("1: ",mesg.includes("홍길동"));//t
+console.log("1: ",mesg.includes("홍길도"));//f
+
+
+//startWith() :어떤 문자열로 시작 여부 반환
+console.log("1:", mesg.startsWith("123"));//t
+console.log("2:", mesg.startsWith("hello"));//f
+console.log("2:", mesg.startsWith("hello",3));//t
+
+//endsWith():어떤 문자열로 끝나는지
+console.log("1:", mesg.endsWith("987"));//t
+console.log("2:", mesg.endsWith("hello"));//f
+console.log("3:", mesg.endsWith("hello",8));//end 길이 t
+
+//repeat() :문자열의 반복
+var mesg="hello";
+console.log("1:", mesg.repeat());//
+console.log("2:", mesg.repeat(1));//hello
+console.log("3:", mesg.repeat(2));//hellohello
+console.log("4:", mesg.repeat(3));//
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

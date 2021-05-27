@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>txt&&exp</title>
+<script type="text/javascript">
+//1.배열로 받음. 
+function aaa2(txt,exp){
+	console.log("txt: ",txt); //배열
+	console.log("txt[0]: ",txt[0]); //첫째
+	console.log("exp: ",exp); //표현식 ${} 찾는중
+	console.log("txt[1]: ",txt[1]); //둘째
+	console.log(txt,txt[0],exp,txt[1]); //전체
+}
+
+let mesg="홍길동";
+aaa2 `world ${mesg} world2 ${mesg}`;
+
+//2
+function aaa3(txt,exp){
+	console.log("txt: ",txt); //배열
+	console.log("txt[0]: ",txt[0]); //첫째
+	console.log("exp: ",exp); //표현식 ${} 찾는중
+	console.log("txt[1]: ",txt[1]); //둘째
+	console.log(txt,txt[0],exp,txt[1]); //전체
+}
+
+aaa3 `happy ${mesg} !!!!`;
+
+
+//3
+function aaa4(txt,exp,exp2){
+	console.log("txt: ",txt); //배열
+	console.log("txt[0]: ",txt[0]); //첫째
+	console.log("exp: ",exp); //표현식 ${} 찾는중
+	console.log("txt[1]: ",txt[1]); //둘째
+	console.log("exp2: ",exp2); //표현식 ${} 찾는중
+	console.log(txt[0],exp,txt[1],exp2); //전체
+}
+aaa4 `안녕하세요 ${mesg}!!!!  건강하세요${mesg}`;
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

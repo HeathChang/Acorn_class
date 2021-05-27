@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<script type="text/javascript">
+
+
+	var arr = Array.from("hello");
+	console.log(arr); //hello 배열
+	
+
+	var arr=Array.from("happy",function (v,idx){
+		console.log(">> ",v,idx); //글자하나 & 인덱스값
+		return v+ "!!!";
+	});
+	console.log(arr); //새로운 배열 생성
+	
+	//
+	console.log("=====");
+	var obj={aaa:100};
+	let arr3=Array.from("hello",function (v,idx){
+		console.log("1:  ",v,idx,this.aaa); //글자하나 & 인덱스값
+		return v+ "!!!"+this.aaa;
+	},obj);
+	console.log(arr3); //새로운 배열 생성
+	
+	
+	
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

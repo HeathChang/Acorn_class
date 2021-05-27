@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<script type="text/javascript">
+//copyWithin(): 인덱스 범위값을 복사해 같은 배열의 지정한 위치에 설정
+//1.
+var arr1 =[1,2,3,4,5];
+let copyArr= arr1.copyWithin(0);
+console.log(copyArr); //1,2,3,4,5
+//
+var arr2 =[1,2,3,4,5];
+let copyArr2= arr2.copyWithin(0,3); //0번자리에 3번부터 끝까지 복사
+console.log(copyArr2);
+//
+var arr3 =[1,2,3,4,5]; 
+let copyArr3= arr3.copyWithin(0,1); //0번쨰 자리에 1번부터 끝까지 복사, 
+console.log(copyArr3);
+//
+var arr=[1,2,3,4,5];
+let copyArr4= arr.copyWithin(2);//2번자리에 2번까지 복사
+console.log(copyArr4);//1,2,1,2,3
+//
+var arr=[1,2,3,4,5];
+let copyArr5= arr.copyWithin(1, 0, 3);  //1번자리에 0-2까지 복사
+console.log(copyArr5);//1, 1,2,3,5
+
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

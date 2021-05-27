@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<script type="text/javascript">
+//arr.entries(): 배열을 map형태로 반환. key는 배열 index 값, value는 배열요소값
+
+var arr=[10,20,30,40,50];
+let x = arr.entries();
+for (let [key,v] of x) {
+	console.log(key,v);
+}
+
+//2.
+var x2=arr.keys();
+console.log(x2);
+for (let key of x2) {
+	console.log(key,": ",arr[key]);
+}
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON 객체//ecma6</title>
+<script type="text/javascript">
+	//Number.isInteger 메소드 : 정수인지 아닌지 boolean값 반환, 타입 체크
+	console.log("1:", Number.isInteger(0)); //t
+	console.log("2:", Number.isInteger(1.0)); //t
+	console.log("3:", Number.isInteger(1.02));//f
+	console.log("4:", Number.isInteger("100"));//f
+	console.log("5:", Number.isInteger(NaN));//f
+	console.log("6:", Number.isInteger(true));//f
+	
+	//"100"=> 100
+	console.log(parseInt("100")+200);
+	console.log(Number.parseInt("100")+200);//권장
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>
