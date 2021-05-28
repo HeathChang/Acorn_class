@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+<script type="text/javascript">
+class Person {
+	//new.target속성,new.target.name 속성
+	//new.target은 생성되는 constructor 참조
+	//new.target.name은 클래스 이름임.
+	constructor(name,age){
+		console.log("constructor call==========");
+		console.log("new.target===",new.target); //construnctor 참조
+		console.log("new.target.name===",new.target.name); //class 이름
+		this.name =name;
+		this.age =age;
+		
+	}
+	
+	
+	set setName(name){
+		this.name= name;
+	}
+	set setAge(age){
+		this.age=age;
+	}
+	get getName(){return this.name;}
+	get getAge(){return this.age;}
+	
+}
+
+//2. 사용하려면 객체 생성 new 사용
+var p1 = new Person("bbb",444);
+console.log(p1.getName,p1.getAge); //
+console.log(p1.name,p1.age); //
+
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

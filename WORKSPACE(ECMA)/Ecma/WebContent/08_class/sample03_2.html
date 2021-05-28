@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+<script type="text/javascript">
+class Person {
+	constructor(name,age){
+		console.log("constructor call==========");
+		this.name =name;
+		this.age =age;
+		return{name: "aaa", age: 1000}
+	}
+	
+	
+	set setName(name){
+		this.name= name;
+	}
+	set setAge(age){
+		this.age=age;
+	}
+	get getName(){return this.name;}
+	get getAge(){return this.age;}
+	
+}
+
+//2. 사용하려면 객체 생성 new 사용
+var p1 = new Person("bbb",444);
+console.log(p1.getName,p1.getAge); //데이터 없음. 
+console.log(p1.name,p1.age); //get 사용시 ()없음
+
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

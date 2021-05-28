@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>map</title>
+<script type="text/javascript">
+	//1.
+	var map = new Map();
+
+	//2. 정보보기 
+	console.log(map);
+
+	//3. 데이터 저장 .set()
+	map.set("one", 100);
+	map.set(1, 200);
+	map.set(false, 300);
+
+	//4. 데이터 출력, entries(): entries: Map 객체의 각 요소에 해당하는 [키, 값] 쌍을 Map에 등록한 순서대로 포함한 새로운 Iterator 객체를 반환합니다.
+	var data = map.entries();
+	console.log(data.next());
+	console.log(data.next());
+	console.log(data.next());
+
+	//5. keys():키를 반환함
+	console.log("===============")
+	var data2 = map.keys();
+	console.log(data2.next());
+	console.log(data2.next());
+	console.log(data2.next());
+
+	//6. value: 추가한 순서로 value 가져옴
+	console.log("===============")
+	var data3 = map.values();
+	console.log(data2.next());
+	console.log(data2.next());
+	console.log(data2.next());
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

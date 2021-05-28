@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>map</title>
+<script type="text/javascript">
+	//1.
+	var map = new Map();
+
+	//2. 정보보기 
+	console.log(map);
+
+	//3. 데이터 저장 .set()
+	map.set("one", 100);
+	map.set(1, 200);
+	map.set(false, 300);
+
+	//4. 데이터 출력, delete(): Map 객체에서 제거할 요소의 키.
+	var result = map.delete(1);
+	console.log(result);
+	console.log(map.delete("two")); //false
+
+	//5. forEach: forEach > 삭제 > forEach
+	console.log("===============")
+	map.forEach(function(elt,i,array){ //value,key,map
+		console.log(elt,i,array)
+	})
+	map.clear();
+	
+	console.log("===============")
+	map.forEach(function(elt,i,array){ //value,key,map
+		console.log(elt,i,array)
+	})
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

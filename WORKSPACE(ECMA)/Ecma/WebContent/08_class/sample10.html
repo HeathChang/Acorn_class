@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>set</title>
+<script type="text/javascript">
+	//1.
+	var s= new Set();
+
+	//2. 정보보기 
+	console.log(s);
+
+	//3. 데이터 저장 .add()
+	s.add("one");
+	s.add(1);
+	s.add(false);
+	console.log(s.size);
+
+	//4. 데이터 출력
+	var data = s.values();
+	
+	console.log(data.next().value); //false
+	console.log(data.next().value); //false
+	console.log(data.next().value); //false
+	
+	var data2=s.values();
+	for (let x of data2) {
+		console.log(">>",x);
+	}
+
+
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

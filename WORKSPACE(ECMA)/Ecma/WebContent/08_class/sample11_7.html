@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>set</title>
+<script type="text/javascript">
+	//promise 객체 특정작업을 비동기 처리해주는 객체
+	//then.catch
+	function xxx() { //매개변수 추가
+		return new Promise(function(resolve, reject) { //처리 로직이 완료된 후 매개변수로 받은 함수를 실행
+			console.log("1");
+			reject();
+			console.log("2");
+		})
+	}
+
+	xxx().then(function() { //첫번쨰 resolve
+		console.log("success");
+	}).catch(//reject시 catch에서 처리
+	function(){ //reject
+		console.log("Error");
+	});
+
+	console.log("end"); //
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

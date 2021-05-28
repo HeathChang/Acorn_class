@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>set</title>
+<script type="text/javascript">
+	//promise 객체 특정작업을 비동기 처리해주는 객체
+	//코드가 끝까지 수행하고 나서 resolve() => then의 첫번쨰 함수 수행
+	//코드가 끝까지 수행하고 나서 reject() => then의 두번째 함수 수행
+	function xxx(param) { //매개변수 추가
+		return new Promise(function(resolve, reject) { //처리 로직이 완료된 후 매개변수로 받은 함수를 실행
+			console.log("1");
+			if (param == "ok") {
+				resolve(100);
+				console.log("resolve")
+			} else {
+				reject(200);
+				console.log("reject")
+
+			}
+			console.log("2");
+		})
+	}
+	var result = xxx("ok");
+	console.log(result); //promise 객체를 받아서 출력&& PromiseStatus:pending 대기 상태
+	result.then(
+	function(x){ //resolve
+		console.log("success: "+x); //success: + 100 //end 이후에 출력
+	},
+	
+	function(y){ //resolve
+		console.log("fail: "+y);
+	});
+	
+	
+	console.log("end");
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

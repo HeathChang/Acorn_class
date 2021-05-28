@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+<script type="text/javascript">
+	class Employee {
+		constructor(name,sal){
+			console.log("constructor call==========");
+			this.name =name;
+			this.salary =sal;
+			
+		}
+		
+		///
+		 setName(name){
+			this.name= name;
+		}
+		 setSalary(salary){
+			this.salary=salary;
+		}
+		 getName(){return this.name;}
+		 getSalary(){return this.salary;}
+		 getEmployee(){
+			return this.name+"\t"+this.salaray;
+		}
+	} //end emp
+
+	class Manager extends Employee{
+		constructor(name,sal,depart) { //생성자: 부모 생성자가 있을때, 부모 생성자 명시적으로 호출
+			super(name,sal); //맨첫줄에 필수로 부모 생성자 호출
+			this.depart=depart;
+			//super()없을경우>>:Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+		}
+		
+		setDepart(depart){return this. depart=depart;}
+		getDepart(){return this.depart;}
+		
+		getEmployee(){
+			return this.toString();
+		}
+		toString(){return this.getName()+"\t"+this.getSalary()+"\t"+this.getDepart()}
+	}
+
+	//2. 사용하려면 객체 생성 new 사용
+	var man= new Manager("홍길동",1000,"인사");
+	
+	console.log(man.getEmployee());
+	
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

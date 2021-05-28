@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+<script type="text/javascript">
+class Person {
+	set setName(name){
+		this.name= name;
+	}
+	set setAge(age){
+		this.age=age;
+	}
+	get getName(){return this.name;}
+	get getAge(){return this.age;}
+	
+}
+
+//2. 사용하려면 객체 생성 new 사용
+var p1 = new Person();
+p1.setName="홍길동"; //set 사용시  =사용
+p1.setAge=20;
+console.log(p1.getName); //get 사용시 ()없음
+console.log(p1.getAge);
+
+var p2 = new Person();
+p2.name="이순신";
+p2.age=40;
+console.log(p2.name);
+console.log(p2.getAge());
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

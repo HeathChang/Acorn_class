@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>일반 함수 & static 함수</title>
+<script type="text/javascript">
+	class Employee {
+
+		 getEmployee(){
+			return "hello";
+		}
+		 static getXXX(){
+			 return "world";
+		 }
+	} //end emp
+
+
+
+	//2. 사용하려면 객체 생성 new 사용
+	console.log(Employee.getXXX()); //static 함수 호출
+	var emp =new Employee(); //기본생성자 호출
+	
+	console.log(emp.getEmployee()); //일반 호출 
+	
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

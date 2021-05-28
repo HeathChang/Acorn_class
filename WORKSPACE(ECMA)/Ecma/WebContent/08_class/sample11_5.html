@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>set</title>
+<script type="text/javascript">
+	//promise 객체 특정작업을 비동기 처리해주는 객체
+	//then 매서드 체인//의도와 다르게 reject시 then에서 success2를 수행하게 됨
+	function xxx(param) { //매개변수 추가
+		return new Promise(function(resolve, reject) { //처리 로직이 완료된 후 매개변수로 받은 함수를 실행
+			console.log("1");
+			if (param == "ok") {
+				resolve();
+				console.log("resolve")
+			} else {
+				reject();
+				console.log("reject")
+			}
+			console.log("2");
+		})
+	}
+
+	var result = xxx("ok");
+	console.log(result); //promise 객체를 받아서 출력&& PromiseStatus:pending 대기 상태
+	result.then(
+
+	function(x) { //첫번쨰 resolve
+		console.log("success 1: ");
+	}, function(x) { //resolve
+		console.log("fail 1: ");
+		reject(); //명시적 호출로 reject 연속 호출시 문제를 보완해 메소드 체인 완성
+	}). //첫번쨰 then 후 then 메소드 체인
+	then(function(x) { // 두번째, resolve
+		console.log("success 2: ");
+	}, function(x) { //resolve
+		console.log("fail 2: ");
+	});
+
+	console.log("end");  //1 promise end success1, success2
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

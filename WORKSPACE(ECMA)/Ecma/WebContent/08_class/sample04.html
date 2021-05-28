@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+<script type="text/javascript">
+class Employee {
+	 setName(name){
+		this.name= name;
+	}
+	 setSalary(salary){
+		this.salary=salary;
+	}
+	 getName(){return this.name;}
+	 getSalary(){return this.salary;}
+	
+} //end emp
+
+class Manager extends Employee{
+	setDepart(depart){return this. depart=depart;}
+	getDepart(){return this.depart;}
+	toString(){return man.getName()+"\t"+man.getSalary()+"\t"+man.getDepart()}
+}
+
+//2. 사용하려면 객체 생성 new 사용
+var man= new Manager();
+man.setName("홍길동");
+man.setSalary(1000);
+man.setDepart("인사");
+
+console.log(man.toString());
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>
