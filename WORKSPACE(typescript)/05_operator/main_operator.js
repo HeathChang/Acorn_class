@@ -1,0 +1,13 @@
+var num1 = 10;
+var num2 = 3;
+var res = 0;
+res = num1 + num2;
+console.log("+ :", res);
+res = num1 - num2;
+console.log("- :", res);
+res = num1 * num2;
+console.log("* :", res);
+res = num1 / num2;
+console.log("/: ", res.toFixed(2));
+res = num1 & num2;
+console.log("%: ", res);
