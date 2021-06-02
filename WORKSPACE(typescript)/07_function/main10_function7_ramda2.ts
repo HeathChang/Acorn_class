@@ -37,6 +37,7 @@ k3(10,20);
 var k6= (x:number, y:number)=>{
      console.log("k6: "+"a: "+x+"\t"+"b: "+y);
     return {first:x, last:y};//object리턴 
+    return {first:x, last:y};
 }
 
 var result= k6(10, 20);

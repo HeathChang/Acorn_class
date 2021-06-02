@@ -1,0 +1,21 @@
+interface Person{
+  age:Number
+}
+
+interface Musician extends Person{
+  instrument:string
+}
+
+var drummer:Musician={
+  age:20,
+  instrument:"드럼"
+}
+
+console.log("나이: ",drummer.age);
+console.log("악기: ",drummer.instrument);
+//type of assertion
+var drummer3={} as Musician;
+drummer3.age=30;
+drummer3.instrument="기타";
+console.log("나이: ",drummer3.age);
+console.log("악기: ",drummer3.instrument);
