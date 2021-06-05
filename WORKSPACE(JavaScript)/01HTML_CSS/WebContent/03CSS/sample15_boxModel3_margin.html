@@ -1,0 +1,44 @@
+<!-- Model:margin-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+#one {
+	margin-top:10px; 
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+#two {
+		margin: 10px 10px 10px 10px; /* 상우하좌 */
+}
+
+#three {
+	margin:10px; /*상우하좌  */
+}
+
+#four {
+	margin: 10px 20px; /*상하:10px 우좌:20px  */
+}
+
+#five {
+	margin: 10px 20px 30px; /* 상,우좌,하: 우좌가 하나로 묶임 */
+}
+</style>
+</head>
+<body>
+	<div id="one">one</div>
+	<div id="two">two</div>
+	<div id="three">three</div>
+	<div id="four">four</div>
+	<div id="five">five</div>
+</body>
+</html>

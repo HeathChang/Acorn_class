@@ -1,0 +1,33 @@
+<!--함수 리터럴 (익명함수 ) && 호출 & 저장 자세히 알것 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//일반적인 함수 선언
+
+		function aaa() {
+			console.log("aaa 함수 ");
+		}
+		var xxx = aaa; //저장
+		xxx(100); //호출
+		aaa(100); //호츨
+
+		//함수 리터럴 (익명 함수 방식) : 얘는 미리 사용 불가능
+		var func4 = function(num) { //익명함수를 변수 저장: 리터럴 함수
+			console.log("func4 " + num);
+		}
+
+		func4(300); //저징
+
+		//변수에 new를 이용해서 함수 생성 후 저장  (자주 사용 X)
+		var func5 = new Function ("x", "y", "return x/y"); //매개변수,매개변수, 함수 본체 코드
+		console.log(func5(100, 200));
+		
+	</script>
+
+</body>
+</html>

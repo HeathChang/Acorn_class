@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [ "a.jpg", "b.jpg", "c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg"]
+	function change(v){
+		var img=document.getElementsByTagName("img");
+		var selectArr=""; // 9개 배열중 3개만 선택
+		if (v==1) {
+			selectArr=arr.slice(0,3);
+			console.log(selectArr);
+		}
+		if (v==2) {
+			selectArr=arr.slice(3,6);
+			console.log(selectArr);
+		}
+		if (v==3) {
+			selectArr=arr.slice(6,9);
+			console.log(selectArr);
+		}
+		
+		for ( var x in img) {
+			img[x].src="../image/"+selectArr[x]; //0번배열의 img 태그의 0,0,1,1
+		}
+	}
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><img src="../image/a.jpg" width="200" height="200" id="flag">
+			</td>
+			<td><img src="../image/b.jpg" width="200" height="200" id="flag">
+			</td>
+			<td><img src="../image/c.jpg" width="200" height="200" id="flag">
+			</td>
+		</tr>
+	</table>
+	<a href="javascript:change(1)">1 </a>
+	<a href="javascript:change(2)">2 </a>
+	<a href="javascript:change(3)">3 </a>
+
+</body>
+</html>

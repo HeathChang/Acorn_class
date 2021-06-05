@@ -1,0 +1,60 @@
+<!--html의 클래스 이름 및 태그를 갖고 오기 위해서 querySelector 을 많이 사용  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload=function(){
+		document.getElementById("allCheck").addEventListener("click", check, false) //전체선택
+		document.querySelector("#test").addEventListener("click", view, false);
+	}
+	
+
+	
+	function view(){
+		var fruits=document.querySelectorAll(".fruits");//클래스 이름으로 선택
+		var result="";
+		for (var i = 0; i < fruits.length; i++) {
+			var fu="";
+			if (fruits[i].checked) {//check된 항목만 선택
+				fu=fruits[i];
+				console.log(">fu>",fu);
+				result+= fu.value+"&nbsp;&nbsp;";//check 된 항목의 value 값을 문자열로 누적
+				console.log(">result>",result);				
+			}
+			console.log(result);
+			document.querySelector("#result").innerHTML=result;//id result에 출력
+		}
+	};
+	
+	function check(){
+		//var fruit=document.getElementById("fruits"); //4개를 얻어옴
+		var fruits=document.querySelectorAll(".fruits"); //css 선택자 사용 4개 (class 이름)
+		for (var i = 0; i < fruits.length; i++) {
+			fruits[i].checked=this.checked; //allcheck의 checked 값
+		}
+	}
+
+</script>
+</head>
+<body>
+
+	전체선택
+	<input type="checkbox" name="allCheck" id="allCheck">
+	<br>
+	<hr>
+	사과
+	<input type="checkbox" name="fruits" class="fruits" value="사과">
+	<br> 수박
+	<input type="checkbox" name="fruits" class="fruits" value="수박">
+	<br> 바나나
+	<input type="checkbox" name="fruits" class="fruits" value="바나나">
+	<br> 오렌지
+	<input type="checkbox" name="fruits" class="fruits" value="오렌지">
+	<br>
+	<button id="test">확인</button>
+	<span id="result"> </span>
+</body>
+</html>

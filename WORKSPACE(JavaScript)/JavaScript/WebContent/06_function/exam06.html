@@ -1,0 +1,26 @@
+<!-- 리턴 사용 && 함수를 변수에 저장-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1.두개의 정수값을 전달해 합계를 출력하는 함수 작성
+
+		function sum(n, m) {
+			var result = n + m;
+			return result;
+		}
+
+		var result = sum(10, 20);
+		console.log(result);
+
+		var y = sum;
+		var result2 = y(10, 20);
+		console.log(result2);
+	</script>
+
+</body>
+</html>

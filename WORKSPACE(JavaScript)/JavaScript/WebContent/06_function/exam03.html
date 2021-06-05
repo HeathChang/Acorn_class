@@ -1,0 +1,24 @@
+<!--함수 매개변수 사용-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log("1");
+		function aaa(n) {
+			console.log("전달받은 값",n);
+			return n+100;
+		}
+		console.log("3");
+		var result=aaa(100); //호출 동시에 값을 넘김
+		console.log(result); //200
+		console.log("4");
+		
+		//1,3,100,200,4
+		</script>
+
+</body>
+</html>

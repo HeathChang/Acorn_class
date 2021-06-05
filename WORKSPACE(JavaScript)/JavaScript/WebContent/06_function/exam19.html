@@ -1,0 +1,30 @@
+<!-- 콜백 함수 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//즉시 호출 함수
+	
+	function  a (n){
+		console.log("a함수 호출")
+		n();
+	}
+	function b(){//실행될 함수
+		console.log("b 함수 호출")
+	}
+	function c(){//실행될 함수
+		console.log("c 함수 호출")
+	}
+	
+	a(b); //b실행
+	a(c); //c실행
+	
+		
+	</script>
+
+</body>
+</html>

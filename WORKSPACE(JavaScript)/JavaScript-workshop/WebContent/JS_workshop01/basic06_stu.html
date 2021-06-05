@@ -1,0 +1,29 @@
+<!--3,5,7 의 배수 다르게 찍기  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var n = prompt("정수를 입력해주세요");
+	n = parseInt(n);
+	var f = "foo";
+	var b = "bar";
+	var z = "barz";
+	var mesg=""; //문자열 누적 변수 
+	function print(mesg) {
+		console.log(mesg);
+	}
+	
+	if(n%3==0) mesg+=f;
+	if(n%5==0) mesg+=b;
+	if(n%7==0) mesg+=z;
+	
+	print(mesg);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

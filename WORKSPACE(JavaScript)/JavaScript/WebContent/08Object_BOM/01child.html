@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function xxx(){
+	window.close(); //내 창닫기
+}
+
+function xxx2(){ //부모창 닫기
+	opener.close();
+}
+</script>
+</head>
+<body>
+여기는 자식창입니니다 <br>
+<button onclick="xxx()">창 닫기 </button>
+<button onclick="xxx2()">부모창닫기 </button>
+
+</body>
+</html>

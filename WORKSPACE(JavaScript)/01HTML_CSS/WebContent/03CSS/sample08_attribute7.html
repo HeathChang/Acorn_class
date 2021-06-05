@@ -1,0 +1,26 @@
+<!--속성 선택자 실습: [속성|=값]활용  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div[class|="en"] { /* class가 en이거나 -을 포함하는*/  
+	color: red;
+
+}
+</style>
+</head>
+<body>
+
+	<div id="one"> one</div>
+	<div class="en"> milk man</div>
+	<div class="kr en"> Letterman2</div>
+	<div class="kr"> newmilk</div>
+	<div id="two" class="en-uk"> superman</div>
+	
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!--  지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload=function() {//화면에 dom이 다 준비된 후 실행
+	var xxx=document.getElementById('xxx');
+	/* xxx.addEventListener("click",function(){ //이벤트명:on이 빠짐(onclick빠짐). 
+		console.log("버튼클릭")
+	},false); //xxx에 클릭 이벤트 발생시, function 동작, 마지막 기본 false */
+		
+	var xxx=document.getElementById("xxx");
+	xxx.addEventListener("click",kkk,false); //이벤트 실행시 on이 빠짐, kkk 함수 이름
+	
+	
+	var myForm=document.getElementById("myForm");
+	myForm.addEventListener("submit", function() {
+		event.preventDefault();
+		console.log("submit 취소");
+		//return false; addEventLisener에서는 prevenDefault 사용
+	}, false);
+	
+	}//end onload
+	
+	function kkk(){
+		console.log("버튼 클릭");
+	}
+
+
+</script>
+</head>
+<body>
+	<form action="target.html" id="myForm"> <!-- .addEventListener 사용: 인라인 핸들러없음 -->
+	아이디<input type="text" name="userid"><br>
+	비번<input type="text" name="passwd"><br>
+	<button>버튼</button>
+	<input type="submit" value="로그인">
+	<input type="reset" value="취소"><br>
+	</form>
+	 <button id="xxx">xxx클릭</button>
+</body>
+</html>

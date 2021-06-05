@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	/*1. 개발자 도구 CONSOL에서 출력 */
+	console.log("Hello World1", 100, "aaa"); //, 사용
+	console.log("Hello World2" + 200 + "bbb"); //b 사용 사용
+
+	/*2. 브라우저에서 출력  */
+	document.write("<h1> HelloWorld-document.write </h1>");
+	document.getElementById("test").style="background-color: red" 
+	/* id="test" 찾아가서 style= "background-color: red" 실행 */
+	//dom(): body에 있는 태그 h1 직접 접근 제어 문제 발생: h1이 생성전에 명령이 실행되기 때문
+</script>
+
+</head>
+<body>
+	<h1 id="test">body부분에서 h1 태그 사용</h1>
+</body>
+</html>

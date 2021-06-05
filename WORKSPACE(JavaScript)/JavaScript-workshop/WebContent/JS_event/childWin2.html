@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function a(){
+		var data=document.getElementById("userid").value; //자식창 userid value 값 가져옴
+		console.log(data);
+		opener.document.getElementById("userid").value=data;
+		console.log(data);
+		console.log(opener.document.getElementById("userid").value);
+		//부모창 userid.value에 자식창의 값 설정
+		window.close();
+	}
+
+</script>
+</head>
+<body>
+ 아이디:<input type="text" name="userid" id="userid">
+ <button onClick="a()">아이디 사용 가능</button>
+</body>
+</html>

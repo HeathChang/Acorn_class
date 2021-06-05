@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function every(n) {
+		console.log(">n>",n);
+		var lang = document.getElementsByClassName("lang");
+		for (var i = 0; i < lang.length; i++) { //0~2까지
+				lang[i].checked=n.checked;
+			
+		}
+	}
+</script>
+</head>
+<body>
+	전체선택
+	<input type="checkbox" name="all" onclick="every(this)">
+	<br>
+	<input type="checkbox" name="java" class="lang">java
+	<br>
+	<input type="checkbox" name="sql" class="lang">sql
+	<br>
+	<input type="checkbox" name="angular" class="lang">angular
+	<br>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+</head>
+<body>
+	
+		값1<input type="text" name="val1" id="v1"> <br>
+		값2<input type="text" name="val2" id="v2"> <br>
+		<button onclick="plus('aaaaaaaa')">+ </button>
+		<button onclick="minus()">- </button>
+		<button onclick="multiple()">* </button>
+		<button onclick="divide()">/ </button>
+		<br>
+		
+		결과값<input type="text" name="resultval" id="result">
+		
+		
+		
+		<script type="text/javascript">
+		function plus(n){
+			console.log(n);
+			var v1=document.getElementById("v1").value;
+			var v2=document.getElementById("v2").value;
+			var result=document.getElementById("result");
+			result.value=parseInt(v1)+ parseInt(v2);			
+		}
+		
+		function minus(){
+			var v1=document.getElementById("v1").value;
+			var v2=document.getElementById("v2").value;
+			var result=document.getElementById("result");
+			result.value=parseInt(v1)- parseInt(v2);	
+		}
+		function multiple(){
+			var v1=document.getElementById("v1").value;
+			var v2=document.getElementById("v2").value;
+			var result=document.getElementById("result");
+			result.value=parseInt(v1)* parseInt(v2);	
+		}
+		
+		function divide(){
+			var v1=document.getElementById("v1").value;
+			var v2=document.getElementById("v2").value;
+			var result=document.getElementById("result");
+			result.value=parseInt(v1)/ parseInt(v2);	
+		}
+		
+		
+		
+		</script>		
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

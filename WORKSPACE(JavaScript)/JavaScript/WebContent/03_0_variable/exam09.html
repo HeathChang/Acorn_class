@@ -1,0 +1,22 @@
+<!--호이스팅  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var scope = "hello";
+		function f() {
+			document.write(scope + "<br>");
+			var scope = "test";
+			document.write(scope + "<br>");
+		}
+
+		f();
+	</script>
+
+
+</body>
+</html>

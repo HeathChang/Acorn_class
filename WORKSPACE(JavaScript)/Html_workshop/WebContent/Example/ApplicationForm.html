@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body>
+	<form name="myForm" action="target.html" method="post">
+		<table border="2">
+			<caption>
+				<span id="blue">기본지원사항</span>
+			</caption>
+			<tr>
+				<th>응시분야</th>
+				<td colspan="2"><select name="role">
+						<option value="Consulting">컨설팅</option>
+						<option value="IoT">IoT</option>
+						<option value="R&D">R&D</option>
+				</select> <select name="role">
+						<option value="Staff">Staff</option>
+						<option value="신입">신입</option>
+						<option value="경력">경력</option>
+				</select></td>
+
+
+
+			</tr>
+			<tr>
+				<th>졸업여부</th>
+				<td colspan="2">
+				<input type="radio" name="status" value="graduated" checked>졸업 <br> 
+				<input type="radio" name="status" value="ungraduated" checked>졸업예정 <br>
+			</tr>
+		</table>
+		<table border="2">
+			<caption>
+				<span id="blue">기본지원사항</span>
+			</caption>
+			<tr>
+				<th >성명</th>
+				<td><textarea name="text" row="1" cols="20"> </textarea> </td>
+				<th >국적</th>
+				<td ><textarea name="text" row="1" cols="20"> </textarea>	</td>
+			</tr>
+			<tr>
+				<th>영문이름</th>
+				<td>
+				성<textarea name="text" row="3" cols="20"> </textarea>
+				</td>
+				<td colspan="2">
+				이름<textarea name="text" row="3" cols="20"> </textarea>	</td>
+			</tr>
+				<tr>
+				<th >이메일</th>
+				<td colspan="3"><textarea name="message" row="1" cols="20"> </textarea>@ 
+				<textarea name="text" row="1" cols="20">	</textarea></td>
+			</tr>
+			
+			<tr>
+				<th >휴대전화</th>
+				<td><textarea name="text" row="1" cols="20"> </textarea> </td>
+				<td ><textarea name="text" row="1" cols="20"> </textarea>	</td>
+				<td ><textarea name="text" row="1" cols="20"> </textarea>	</td>
+			</tr>
+			</table>
+			
+			<table border="2">
+			<caption>
+				<span id="blue">어학사항</span>
+			</caption>
+			<tr>
+				<th>어학구분</th>
+				<td><select name="어학구분">
+						<option value="영어">English</option>
+						<option value="불어">French</option>
+						<option value="러시아어">Russia</option></td>
+				</select>
+			
+			<tr>
+				<th>어학시험명</th>
+				<td><textarea name="text" name="testname"> </textarea></td>
+			</tr>
+
+			<tr>
+				<th>점수 등급</th>
+				<td><textarea name="text" row="1" cols="20"> </textarea>
+				 <textarea name="text" row="1" cols="20"> </textarea>
+				</td>
+			</tr>
+	</table>
+	<input type="submit" value="지원하기"></input>
+	<input type="reset" value="취소하기"></input>
+			</form>
+</body>
+</html>

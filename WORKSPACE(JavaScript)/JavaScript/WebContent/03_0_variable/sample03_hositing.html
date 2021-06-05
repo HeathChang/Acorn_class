@@ -1,0 +1,29 @@
+<!--호이스팅-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//호이스팅:var로 선언된 것은 어떤 위치에 있든 위로 끌어올린다	
+		console.log(foo); //undefined
+		var foo;
+		foo=3;
+		console.log(foo);//3
+		////
+		function showFoo() {
+			console.log(">>"+foo); //undefined: 지역변수 사용하고 있음 (같은 변수 명이 있을 경우)
+			var foo;
+			foo="inky";
+			console.log(foo);
+		}
+		showFoo();
+		
+		
+	</script>
+
+
+</body>
+</html>

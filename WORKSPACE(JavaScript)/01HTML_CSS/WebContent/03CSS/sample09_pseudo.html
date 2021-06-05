@@ -1,0 +1,26 @@
+<!-- pseudo 예제: 의사코드 클래스  (Anchor) :단어만으로 의사소통이 가능 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+a:link {color:#FF0000;} /* 방문전: RED */ 
+a:visited {color:#00FF00;}/* 방문후: GREEN */
+a:hover {color:#FF00FF;} /* 마우스를 올려놓았을때: PURPLE */
+a:active {color:#0000FF;} /* 누를때: BLUE */
+
+input:focus { /* 클릭시, 색상 RED로 변경 */
+	background-color: #FF0000;
+}
+
+</style>
+</head>
+<body>
+	<a href="#" target="_blank">This is a link </a> <br> <!-- 이게 바뀐다 -->
+	이름:<input type="text" name="username"><br>
+	나이:<input type="text" name="userage"><br>
+	주소:<input type="text" name="useraddress"><br>
+	
+	 
+</body>
+</html>

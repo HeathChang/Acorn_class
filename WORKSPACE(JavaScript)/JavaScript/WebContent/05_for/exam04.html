@@ -1,0 +1,37 @@
+<!-- continue && label -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//continue는 가장 가까운 for문 탈출
+	for (var n = 1; n <= 3; n++) {
+
+		for (var m = 1; m <= 4; m++) {
+
+			console.log(n, "\t", m);
+			if (m == 3)
+				continue;
+		}
+		console.log("aaa", n)
+	}
+	console.log("Out at: ", n, m);
+
+	console.log("======new Line========");
+
+	AAA: for (var n = 1; n <= 5; n++) {
+		for (var m = 1; m <= 5; m++) {
+			console.log(n, "\t", m);
+			if (m == 3)
+				continue AAA;//라벨로 이동: 원래는 5까지 출력되야하지만 라벨로 인해 라벨이 붙은 곳(AAA)으로 이동해서 시작; n: 1~5 && m:1~3.
+		}
+		console.log("aaa", n)
+	}
+	console.log("Out at: ", n, m);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function init() {
+		console.log("모든 html이 모두 DOM으로 생성된 후 실행")
+	}
+	//
+	function xxx() {
+		console.log("xxx>> onclick 호출")
+	}
+	function yyy() {
+		console.log("yyy>> onmouseover 호출") /* 마우스 가져다대면 */
+	}
+	function zzz() {
+		console.log("zzz>> onmouseout 호출") /* 마우스를 띄면  */
+	}
+	//
+	function kkk(v){
+		console.log("kkk>> keyboard가 up",v) /* 무언가를 쳤을떄 */
+	
+	}
+	
+	//
+	function xyz(e){ //event를 매개변수로
+		console.log("event>>",e,e.screenX,e.screenY); //발생한 이벤트 정보들을 출력
+	}
+	
+	
+</script>
+</head>
+<body onload="init()">
+	<button onclick="xxx()" onmouseover="yyy()" onmouseout="zzz()">클릭</button>
+	<!-- 클릭, mouseover, mouseout -->
+	<input type="text" name="userid" onkeyup="kkk(this.value)"> <!--써진 글씨를 넘김  -->
+	<!-- this: 이벤트 발생된 태그 -->
+	<button onclick="xyz(event)">이벤트정보</button>
+</body>
+</html>

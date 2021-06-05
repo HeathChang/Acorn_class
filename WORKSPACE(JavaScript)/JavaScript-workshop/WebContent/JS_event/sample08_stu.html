@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pwcheck(n){
+		var r="비번 일치 ";
+		var v1=document.getElementById("passwd").value;
+		if(v1!=n){
+			r="비번 불일치"
+		}
+		document.getElementById("result").innerText=r;
+	}
+	
+	
+</script>
+</head>
+<body>
+	비밀번호 확인 구현
+	<br> 비밀번호
+	<input type="text" name="passwd" id="passwd">
+	<br> 비밀번호 재확인
+	<input type="text" name="passwd1" id="passwd1" onkeyup="pwcheck(this.value)">
+	<span id='result'></span>
+</body>
+</html>

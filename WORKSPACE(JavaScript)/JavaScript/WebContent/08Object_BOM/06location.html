@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log(".origin>>",location.origin);
+	console.log(".pathname>>",location.pathname); //contextname/폴더위치/파일이름.확장자
+	console.log(".hostname>>",location.hostname);
+	console.log(".host>>",location.host);
+	console.log(".protocol>>",location.protocol);
+	console.log(".port>>",location.port);
+	//
+	function xxx(){
+		location.reload();
+	}
+	function yyy(){
+		location.href="http://www.google.com"
+	}
+	
+</script>
+</head>
+<body>
+<button onclick="xxx()">reload</button>
+<a href="javascript:yyy()">구글</a>
+</body>
+</html>

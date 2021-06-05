@@ -1,0 +1,35 @@
+<!-- 배열 for문 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//1.[] 사용
+	var n2 =[10,20,9,7,5,3,1]; //배열 생성
+	
+	for (var i = 0; i < n2.length; i++) {
+		console.log(n2[i]);
+	}
+	for ( var k in n2) {
+		console.log(n2[k],":",k);
+	}
+	
+	for ( var i in n2) {
+		console.log(">in>",n2[i]);
+	}
+	
+	for ( var i of n2) {
+		console.log(">of>",i);
+	}
+	
+
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

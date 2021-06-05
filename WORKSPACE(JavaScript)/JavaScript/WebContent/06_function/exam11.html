@@ -1,0 +1,25 @@
+<!--함수 선언전에 호출 가능-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		aaa(); // 선언전 호출 가능
+		var y=aaa;
+		console.log(y);
+		function aaa(){ //컴파일 단계에서 생성
+			console.log("aaa 함수");
+		}
+		
+		console.log(aaa); //함수 호출이 아닌 함수를 출력
+	/* 	var aaa=20; //함수로 지정 했기때문에 var 사용 X
+		aaa(); */
+		
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- 리턴 사용 && 함수를 변수에 저장-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function aaa() {
+			console.log("2");
+			return 100;
+		}
+		console.log("3");
+		var x=aaa();  
+		console.log("4",x);
+		//3 2 4 100 
+		
+		//호출이 아닌, 함수를 변수에 저장 (단, 미리 선언된 함수에 한해서 가능)
+		var y =aaa;
+		console.log("yyy",y);
+		y(); // aaa()라는 함수을 가진 y();
+		
+		</script>
+
+</body>
+</html>

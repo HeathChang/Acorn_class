@@ -1,0 +1,36 @@
+<!--html의 클래스 이름 및 태그를 갖고 오기 위해서 querySelector 을 많이 사용  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("chk").addEventListener("click", check,false);
+		document.getElementById("address2").addEventListener("keyup",function(){ //keyup
+			console.log(">querySelector>",document.querySelector("#result"));//하나의 태그 리턴 id 사용,css 선택자,#id
+			document.querySelector("#result").innerHTML=this.value;
+			//document.getElementById("result").innerHTML=this.value;
+			// querySelector()를 사용하여 html의 태그와 클래스를 JavaScript에 가져옵
+		},false);
+	}//end onload
+	
+	function check(){
+		document.getElementById("address2").value=
+			document.getElementById("address").value; //address 복사
+		
+	}
+
+</script>
+</head>
+<body>
+	회원주소
+	<input type="text" name="address" id="address" value="공주~~~~">
+	<br> 배송지가 같으면 다음을 체크하세요
+	<input type="checkbox" name="chk" id="chk">
+	<br> 배송지 주소
+	<input type="text" name="address2" id="address2">
+	<br>
+	<span id="result"></span>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- continue && break -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//다중 
+	for (var n = 1; n <= 5; n++) {
+		console.log("a");
+		if (n == 3)	continue; //b && c 는 continue로 빠져나감
+		console.log("b");
+		console.log("c");
+	}
+	for (var n = 1; n <= 5; n++) {
+		if (n == 3)
+			break; //n=3일때 빠져나감,찍히는 값은 2까지 
+		console.log("hello", n); //n=2
+
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

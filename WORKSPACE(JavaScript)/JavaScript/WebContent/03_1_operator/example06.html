@@ -1,0 +1,45 @@
+<!-- 논리연산자 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	console.log(!true);
+	console.log(!false);
+	console.log(!(3>4));
+	
+	var x =3;
+	var x2=5;
+	console.log(!(x>x2));
+	//||
+	console.log(true|| true);
+	console.log(true||false);
+	console.log(false ||false);
+	
+	console.log((x>x2)|| (x==x2));
+	//&&
+	console.log(true&& true);
+	console.log(true && false);
+	console.log(false && false);
+	
+	console.log((x<x2)&&(x!=x2));
+	
+	//
+	console.log("<br>");
+	console.log("||");
+	console.log("'123'||10" ,"123"||10); // 앞의 값 true 이므로 앞의 값 wnd, '123' cnffur
+	console.log(0||10); //0 → false이므로 뒤의 값
+	console.log("&&");
+	console.log("'123'&&10" ,123&&10); // 앞의 값 true 이므로 뒤의 값 (123||10)확인, 이때, ||로 비교함으로 123이 true이므로 123 출력
+	console.log(0&&10); //0 → false이므로 앞의 값
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

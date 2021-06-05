@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="T05_03.css">
+
+</head>
+<body>
+	<form name="myForm" action="target.html" method="get">
+		<h1>지원서 작성</h1>
+		<hr width="90%" color="black" align="left">
+
+
+		<table border="1">
+			<caption>
+				<span id="blue">기본지원사항</span>
+			</caption>
+			<tr>
+				<th>응시분야</th>
+				<td colspan="2"><select name="role">
+						<option value="Consulting">Consulting</option>
+				</select> <select name="role">
+						<option value="Staff">Staff</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>졸업여부</th>
+				<td colspan="2"><input type="radio" name="status"
+					value="graduated" checked>졸업 <br> <input type="radio"
+					name="status" value="ungraduated">졸업예정 <br>
+			</tr>
+		</table>
+
+
+		<table border="1">
+			<caption>
+				<span id="blue" style="text-align: left; ">기본인적사항</span>
+			</caption>
+			<tr>
+				<th>성명</th>
+				<td> <input type="text"  style="width:200px;height:20px;"></td>
+				<th>국적</th>
+				<td> <input type="text"  style="width:200px;height:20px;"></td>
+			</tr>
+
+			<tr>
+				<th>영문이름</th>
+				<td>성<input type="text"  style="width:200px;height:20px;">
+				</td>
+				<td colspan="2">이름<input type="text"  style="width:200px;height:20px;">
+				</td>
+			</tr>
+
+			<tr>
+				<th>이메일</th>
+				<td colspan="3"><input type="text"  style="width:200px;height:20px;">@
+					<input type="text"  style="width:200px;height:20px;"></td>
+			</tr>
+
+			<tr>
+				<th>휴대전화</th>
+				<td colspan="3"><input type="text"  style="width:70px;height:20px;">
+					-<input type="text"  style="width:70px;height:20px;"> -<input type="text"  style="width:70px;height:20px;"></td>
+			</tr>
+		</table>
+
+		<input type="submit" value="전송"></input> 
+		<input type="reset" value="취소하기"></input>
+			</form>
+</body>
+</html>

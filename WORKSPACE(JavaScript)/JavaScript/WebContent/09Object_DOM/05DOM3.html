@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+	<p> hello</p>
+	<div>	
+		<div id="x">홍길동</div>
+	</div>
+	<a href="daum.net"> 다음 </a> <br>
+	<div id="y"> <h1>이순신</h1> </div>
+	
+	<script type="text/javascript">
+		var div= document.getElementById("x");
+		console.log(">>div>>",div);
+		var s=div.innerText; /* div 태그 사이의 문자열을 가져오기 */
+		console.log(">>s>>",s);
+		console.log(">>s.length>>",s.length);
+		console.log(">>s.chartAt>>",s.charAt(0));
+		
+		var html= document.getElementById("y").innerHTML; //div 태그 사이의 문자열+ 태그까지 함께 포함
+		console.log(html);
+		
+		
+	
+	
+	</script>
+</body>
+</html>

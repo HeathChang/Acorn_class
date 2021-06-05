@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//변수 선언과 동시에 초기화: 타입선언 필요없음 Var로 선언
+		var name = "Kim";
+		var age = 20;
+		var array = [ 1, 2, 3, 4 ];// 배열의 JSON
+		var obj = {
+			"username" : "Lee",
+			"age" : 54
+		}; //객체의 JSON
+		var result = true; //boolean
+		var xxx; //undefined
+		var kkk = null; //null
+		var zzz = function() {
+		}; //함수 객체 
+		//
+		var xyz = parseInt("123"); //자바에서 Interger.parserInt(문자열) = 자바스크립트 parseInt(문자열)
+		console.log(xyz + 10);
+		//
+		var xyz2 = parseInt("hello"); //NAN(Not a Number)출력
+		console.log(xyz2);
+		//
+		name = 200; //String type이였던 name을 int 타입으로 변경해도 괜찮다. 
+		console.log(name);
+		console.log(age);
+		//	
+		console.log(array);//배열
+		console.log(obj); //object
+		//
+		console.log("obj.username", obj.username, "obj.age", obj.age);
+		console.log("obj['username']", obj["username"]); //obj["username"]
+		console.log("obj['username']", obj['username']); //obj['username']
+
+		//	
+		console.log(result);
+		console.log(xxx);
+		console.log(kkk);
+		console.log("function", zzz);
+		//객체에 없는 프로퍼티 접근: undefined
+
+		var foo = {
+			"name" : "sss",
+			"age" : 20
+		}
+
+		console.log(foo.name + "\t" + foo['name']);
+		console.log(foo.name + "\t" + foo["name"]);
+		console.log(foo.age + "\t" + foo['age']);
+		console.log(foo.age + "\t" + foo["age"]);
+		console.log(foo[0] + "\t" + foo[1]); //undefined
+		console.log(foo.address);//undefined
+	</script>
+</body>
+</html>

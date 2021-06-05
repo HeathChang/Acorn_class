@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//input: checked된거
+/* 	function result(){
+		var hobby=document.querySelectorAll("input:checked") //check된 애들만 선택
+		var mesg="";
+		for (var i = 0; i < hobby.length; i++) {
+			mesg+=hobby[i].value+"\t";
+		}	
+	document.getElementById("result").innerText=mesg;
+	} */
+//class이름으로
+/* 	function result(){
+		var hobby=document.querySelectorAll(".hobby:checked") //check된 애들만 선택
+		var mesg="";
+		for (var i = 0; i < hobby.length; i++) {
+			mesg+=hobby[i].value+"\t";
+		}	
+		document.getElementById("result").innerText=mesg;
+		}  */
+	
+//hobby 
+	function result(){
+		
+		var hobby= document.getElementsByName("hobby"); //전부다 가져옴
+		var mesg="";
+		console.log(hobby)
+		for (var i = 0; i < hobby.length; i++) {
+			if(hobby[i].checked) mesg= mesg+hobby[i].value+ "\t"
+		}
+		document.getElementById("result").innerText=mesg;
+	} 
+	
+	
+</script>
+</head>
+<body>
+취미<br>
+<ul>
+<li>야구<input type="checkbox" class="hobby" name="hobby" value="야구"></li>
+<li>농구<input type="checkbox" class="hobby" name="hobby" value="농구"></li>
+<li>게임<input type="checkbox" class="hobby" name="hobby" value="게임"></li>
+</ul>
+<button onclick="result()">결과보기</button><br>
+결과값:<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!--리턴값에 함수 사용-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function aaa() {
+			console.log("aaa 함수 ");
+		}
+
+		function bbb() { //x= aaa함수를 매개변수로 받음
+			console.log("bbb함수 호출: ", x);
+			return aaa; //aaa함수 리턴
+		}
+		
+		// 일급 객체의 세번째 특징 -리턴값에 함수 사용
+		var x=bbb();
+		console.log(x); //리턴값으로 함수를 받음 x= aaa함수 (//x= aaa함수를 매개변수로 받음)
+		
+		////
+		 function ccc() {
+			return function(n1,n2){
+				return n1+n2;
+			};
+		}
+		
+		y=ccc();// 함수 호출:  y=function (n1,n2){return n1+n2}; ccc()함수의 내부 코드 
+		console.log(y)		
+		console.log(y(10,20));
+	</script>
+
+</body>
+</html>

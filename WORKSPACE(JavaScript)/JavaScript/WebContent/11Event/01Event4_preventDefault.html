@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx() {
+		console.log("aaaaaaaaaaaaaa");
+		alert("submit");
+		console.log("aaaaaaaaaaaaaa");
+	}
+
+	function xxx2() {
+	var id= document.getElementById("userid").value;
+	var passwd= document.getElementById("passwd").value;
+	var result=false;
+	if (id.length >=3 && passwd.length!=0) {
+		result=true;
+	}else{
+		result=false;
+		alert("에러");
+	}
+	return result;
+	//return false 경우,action 금지 
+	
+	}
+	
+	function xxx3(e){
+		console.log(">>e>>",e);
+		alert("xxx3 submit")
+		e.preventDefault(); // action금지 event.prevent()매개변수로 넘어온 이벤트 동작 정지
+		console.log("=============")
+	}
+	
+	window.onload=function(){ 
+		var form= document.getElementById("xxx");
+		console.log(form);
+		form.onsubmit=function(){
+			alert("xxxxxxxxx");
+			event.preventDefault();
+		}
+ 
+		var form= document.getElementById("yyy");
+		form.onsubmit=function(){
+			alert("yyyyy");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<form action="target.html" onsubmit="xxx()"><!-- 주의  -->
+아이디======1<input type="text" name="userid" ><br>
+비번=======1<input type="text" name="passwd" ><br>
+<button>버튼</button> 
+<input type="submit" value="로그인"><br>
+<input type="reset" value="취소"><br>
+</form>
+
+<form action="target.html" onsubmit="return xxx2()"><!-- 주의:return 없을시, alert 창 뜨고 넘어감 .  -->
+아이디======2<input type="text" name="userid" id="userid" ><br>
+비번=======2<input type="text" name="passwd" id="passwd"><br>
+<button>버튼</button>
+<input type="submit" value="로그인"><br> <!--submit 이벤트 발생  -->
+</form>
+
+
+<form action="target.html" onsubmit="xxx3(event)"><!-- 주의  -->
+아이디======3<input type="text" name="userid" ><br>
+비번=======3<input type="text" name="passwd" ><br>
+<button>버튼</button>
+<input type="submit" value="로그인"><br> <!--submit 이벤트 발생  -->
+</form>
+
+<form action="target.html" id="test"><!-- 주의  -->
+아이디======4<input type="text" name="userid" ><br>
+비번=======4<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br> <!--submit 이벤트 발생  -->
+<button>버튼</button>
+</form>
+
+<form action="target.html" id="xxx"> <!-- 주의: 고전모델방식, onsubmit 삭제 -->
+아이디======5<input type="text" name="userid" ><br>
+비번=======5<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br> <!--submit 이벤트 발생  -->
+<button>버튼</button>
+</form>
+
+<form action="target.html" id="yyy"> 
+아이디======6<input type="text" name="userid" ><br>
+비번=======6<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br> <!--submit 이벤트 발생  -->
+<button>버튼</button>
+</form>
+
+</body>
+</html>

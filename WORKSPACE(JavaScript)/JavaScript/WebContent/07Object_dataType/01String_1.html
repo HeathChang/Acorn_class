@@ -1,0 +1,54 @@
+<!--문자열 생성하는 방법  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//문자열 생성
+	//1.리터럴
+	var s = "hello";
+	//2.new String 
+	var s2 = new String("hello");
+
+	console.log("문자열 길이", s.length);
+	console.log("특정 문자 구하기", s.charAt(0));
+	console.log("특정 문자 구하기", s2.charAt(0));
+	var ss = s.concat(" world");
+	console.log("문자열 연결", ss);
+	var ss2 = s.concat("aa", "bb");
+	console.log("문자열 연결2", ss2);
+	//
+	console.log("특정문자위치", ss.indexOf('e')); //0부터 시작함으로, 1
+	console.log("부분열", s.substring(1, 3)); //el (start,end)
+	console.log("부분열", s.substr(1, 3)); //ell (1부터 3개)
+	console.log("대문자: ", s.toUpperCase());
+	console.log("소문자: ", s.toLowerCase());
+
+	var xx = "Hello world happy";
+	var arr = xx.split(" ");
+	for ( var i in arr) { //foreach: ~in: i- index값
+		console.log(arr[i]);
+	}
+
+	var xx2 = "Hello/worl/happy/xxx/yyyy";
+	var arr2 = xx.split("/", 3);
+	for ( var i in arr2) { //foreach: ~in: i- index값
+		console.log(arr2[i]);
+	}
+	
+	var kk="Hello";
+	console.log("replace",kk.replace("H","A"));
+	
+	var kk2="       world   ";
+	console.log(kk2.length,kk2.trim().length); //15,  5
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

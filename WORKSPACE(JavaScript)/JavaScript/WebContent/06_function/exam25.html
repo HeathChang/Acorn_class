@@ -1,0 +1,24 @@
+<!-- 유틸리티 함수 함수 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	function call(info) { //실행시킬함수
+		info();
+	}
+	
+	var callback=function(){ //실제 실행될 함수
+		console.log("callback");
+	}
+
+	call(callback);
+	
+	</script>
+
+</body>
+</html>

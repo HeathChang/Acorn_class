@@ -1,0 +1,18 @@
+<!--  file 전송  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 태그실습</title>
+
+
+</head>
+<body><!-- 여러 라인 사용 가능; 주로 post방식 -->
+	<form name="myForm" action="sample10_target.html" method="post" enctype="multipart/form-data">
+		파일선택 <input type="file" name="theFile"><br>
+		<input type="submit" value="전송"> 
+		<input type="reset" value="취소">  <!-- 취소시, 삭제된다 -->
+	</form>
+</body>
+</html>

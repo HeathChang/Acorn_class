@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [];
+
+	function save() {
+		var s1 = document.getElementById("v1");
+		arr.push(s1.value);
+		list();
+		s1.value=null;
+		/////
+		/* var s1 = document.getElementById("v1").value;  //v1.value의 값을 s1에 저장: 향후 s1을 null로 한다고해도, v1.value가 null이 되는 것이 아님. 
+		arr.push(s1);
+		list();
+		s1=null; */
+	
+	}
+
+	function list() {
+		var mesg = "";
+		for (var i = 0; i < arr.length; i++) {
+			mesg += arr[i] + "<br>";
+		}
+		document.getElementById("result").innerHTML = mesg;
+	}
+
+	function enter(e) { //e=event
+		console.log(e.keyCode);
+		if (event.keyCode == 13) {//입력된 키 정보값: 13 → enter 
+			save();
+		}
+	
+	}
+</script>
+</head>
+<body>
+	값:
+	<input type="search" name="v1" id="v1" onkeyup="enter(event)">
+	<!--발생한 이벤트 정보를 넘김  -->
+	<div id="result"></div>
+
+</body>
+</html>

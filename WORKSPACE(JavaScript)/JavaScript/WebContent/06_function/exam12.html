@@ -1,0 +1,23 @@
+<!--함수를 매개변수로 받음-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function aaa() {
+			console.log("aaa 함수 ");
+		}
+
+		function bbb(x) { //x= aaa함수를 매개변수로 받음
+			console.log("bbb함수 호출: ", x);
+				x(); //x=aaa함수 이므로, aaa함수 호출 
+		}
+
+		bbb(aaa);
+	</script>
+
+</body>
+</html>

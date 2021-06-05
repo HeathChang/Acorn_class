@@ -1,0 +1,51 @@
+<!--함수 사용: -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var aaa = function() {
+			console.log("aaa 함수 호출");
+			return 100;
+		};
+
+		//일급 객체 - 변수 저장
+		var xxx1 = aaa; //xxx1에는 함수 aaa가 저장
+		var xxx2 = aaa(); // xxx2에는 함수 aaa가 실행되고 리턴값이 저장된다.
+
+		console.log("xxx1: ", xxx1); //저장된 함수 불러오기 
+		console.log(" ");
+		console.log("xxx1(): ", xxx1()); //저장된 함수를 실행하고 리턴값 저장
+		console.log("xxx2: ", xxx2); //함수를 실행하고 리턴값 저장
+		/////여기서 저장된 함수 & 호출된 함수 차이 자세히 알 것. 
+		//일급객체- 전달값 사용
+		function kkk(x) {
+			console.log("kkk 호출: ", x);
+			x(); //triger 역할
+		}
+		var ppp = function() {
+			console.log("ppp호출");
+		}
+		kkk(ppp); // kkk함수에 매개변수로 익명함수 전달
+
+		//일급객체- 리턴값으로 사용
+		function ttt(){
+			console.log("ttt 호출",eee); //여기에 eee가 담겨있음
+			console.log("eee")
+			return eee;
+		}
+		var eee= function(){
+			console.log("eee 호출");
+		}
+		
+		var k =ttt(); //k=function(){console.log("eee 호출");} (현 상태는, var k에 함수 eee가 들어있는 상태일 뿐임.)
+		k();//eee호출을 여기서 호출
+		
+		
+		</script>
+
+</body>
+</html>

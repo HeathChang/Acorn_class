@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		var arr=[];
+		
+		function save(){
+			var s1=document.getElementById("v1").value;
+			arr.push(s1);
+			list();
+		}
+		
+		function list(){
+			var mesg="";
+			for (var i = 0; i < arr.length; i++) {
+				mesg+=arr[i]+"<br>";
+			}
+			document.getElementById("result").innerHTML=mesg;
+		}
+</script>
+</head>
+<body>
+	값:
+	<input type="search" name="v1" id="v1">
+	<button onClick="save()">저장</button>
+	<br>
+
+	<div id="result"></div>
+
+</body>
+</html>

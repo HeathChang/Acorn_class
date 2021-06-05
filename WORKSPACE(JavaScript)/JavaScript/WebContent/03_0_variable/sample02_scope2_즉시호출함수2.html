@@ -1,0 +1,35 @@
+<!--즉시 호출 함수-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function outputNumbers(count){
+	(function (){
+		for (var i = 0; i < count; i++) {
+			console.log("i: "+i); //익명함수 범위		
+		}
+		console.log("final: ",i); 
+	})(); //end
+	//console.log(">>",i); //에러 범위 벗어남 
+	
+	}
+
+	outputNumbers(5);	
+	
+	
+	function test(n){
+		(function() {
+			console.log("test2",n);
+		})
+		();
+	}
+		test(10);
+	</script>
+
+
+</body>
+</html>

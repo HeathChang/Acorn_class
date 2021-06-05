@@ -1,0 +1,31 @@
+<!-- display --> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p{
+		display: inline; /* inline으로 변경했기때문에 Hello World 나오고 <div>로 인해 개행되고 Hello2 World2출력 */
+	}
+	
+	div.two{ /* div태그중에 (class가) two */
+		display: none;
+	}
+
+</style>
+</head>
+<body>
+
+
+	<div class="one">
+	<p>  Hello </p>
+	<p>  world </p>
+	</div>
+
+	<div class="two">
+	<p>  Hello2 </p>
+	<p>  world2 </p>
+	</div>
+</body>
+</html>

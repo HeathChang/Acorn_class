@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//변수 선언
+		var name="홍길동";
+		var name2= new String("홍길동");
+		var age=20;
+		var array=[1,2];
+		var object2={};
+		var a=false;
+		var b= null;
+		var c;
+		var k=function(){};
+		//const T=123; //JVS 상수 선언 자바의 final, var 대신 const 사용
+		/* T=124; // 불가 */  
+		
+		console.log(typeof name2); //object 타입
+		console.log(name instanceof String); //f
+		console.log(name2 instanceof String); //t
+		console.log(age instanceof Number); //f
+		//
+		console.log("new line")
+		console.log(array instanceof Array); //t
+		console.log(typeof object2); //t
+		console.log(object2 instanceof Object); //t
+		console.log(a instanceof Boolean); //f
+		console.log(typeof a, typeof b);
+		
+		console.log(typeof b);
+		console.log(b instanceof Object);  //f
+		console.log(k instanceof Function);  //t
+
+		
+	</script>
+</body>
+</html>

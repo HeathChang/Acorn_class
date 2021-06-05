@@ -1,0 +1,26 @@
+<!--점수 입력받아, 평균구하고 불합격 여부  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var n = prompt("면접점수: ");
+	n = parseInt(n);
+	var m = prompt("영어점수: ");
+	m = parseInt(m);
+
+	var sum=n+m;
+	var avg=sum/2;
+	
+	
+	console.log("면접 점수: ", n);
+	console.log("영어 점수: ", m);
+	console.log("평균: ", avg);
+	(avg>=80)?console.log("합격"):console.log("불합격");
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- pseudo실습:유일한 자식 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p:only-child { /*  띄어쓰기 조심 */
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div>
+		<p>1</p>
+	</div>
+
+	<div>
+		<p>2</p>
+		<p>3</p>
+
+		<div>
+			<p>4</p>
+			<!-- 후손이라도, 유일이기 때문에, 영향 -->
+		</div>
+	</div>
+
+</body>
+</html>

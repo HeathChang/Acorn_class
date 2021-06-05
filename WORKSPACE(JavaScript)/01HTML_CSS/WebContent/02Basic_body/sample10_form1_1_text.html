@@ -1,0 +1,28 @@
+<!--  form get: 주소에 key = value값이 묻혀서 나오는 것을 의미 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 태그실습: get</title>
+
+
+</head>
+<body>
+
+	<form name="myForm" action="sample10_target.html" method="get"> <!--ㅡmethod: 가 없을시, default는 get으로 들어감  -->
+		<!--폼의 이름=myForm && 데이터전송" target.html && 전송방식: get 방식 -->
+		아이디: <br> <input type="text" name="userid" value="test">
+		<br>
+		<!-- 전송: target.html name:value = name: userid  &&  value:사용자가 적어준 내용 -->
+		비밀번호:<br> <input type="text" name="passwd1"> <br>
+		<!-- 전송: target.html name:value = name: passwd1  &&  value:사용자가 적어준 내용 -->
+		비밀번호:<br> <input type="password" name="passwd2"> <br>
+		<!-- 전송: target.html name:value = name: passwd2  &&  value:사용자가 적어준 내용 -->
+		<input type="submit" value="전송">
+		<!-- 전송을 눌렀을때, submit을 통해   action="sample10_target.html" 로 연결-->
+	</form>
+
+
+</body>
+</html>

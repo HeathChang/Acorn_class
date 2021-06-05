@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log("10" + 20);
+	console.log("10" + 20 + 30 + 40); //문자열 연결 (1020으로 형변환→102030으로 형변환 → 10203040으로 형변환 )
+	console.log(20 + 30 + 40 + "10"); //덧셈 후, 문자열 연결 
+	//+은 자동 형변환 안된다. 
+
+	//자동 형변환
+	console.log('20' - 3);
+	console.log("20" * 3);
+	console.log("20" / 3);
+	console.log("20" % 3);
+
+	var n = '10';
+	var n2 = 20;
+	var result = n + n2;
+	console.log(parseInt(n) + n2); //parseInt로 형변환
+	console.log("n+n2", result); //문자열 연결
+
+	//NaN
+	var s = parseInt("a");
+	console.log(s);
+
+	//example 03
+	console.log("example 03====")
+	var n = 10;
+	var n2 = 5;
+
+	n += n2;
+	console.log(n, n2);
+	n -= n2;
+	console.log(n, n2);
+	n *= n2;
+	console.log(n, n2);
+	n /= n2;
+	console.log(n, n2);
+	n += n2;
+	console.log(n, n2);
+	n %= n2;
+	console.log(n, n2);
+
+	var n3 = "10";
+	var n = 1;
+	n += n3;
+	console.log(n, n3)
+
+	//example 04
+	console.log("example 04====")
+	var n = 10;
+	var n2 = 5;
+
+	console.log(n == n2);
+	console.log(n != n2);
+	console.log(n > n2);
+	console.log(n >= n2);
+	console.log(n < n2);
+	console.log(n <= n2);
+
+	console.log(n == 10);
+	console.log(n == null);
+	console.log(n == undefined);
+	console.log(n == NaN);
+</script>
+</head>
+<body>
+
+</body>
+</html>

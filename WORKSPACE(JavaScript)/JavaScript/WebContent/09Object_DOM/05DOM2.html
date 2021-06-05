@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx(){
+		var arr=document.getElementsByClassName("fruits");
+		console.log(arr);//전체 다를 가져옴
+		var str="";
+		for (var i = 0; i < arr.length; i++) {
+			var c=arr[i];
+			if (c.checked) {
+				str+= c.value + "\n";
+			}
+		}
+	document.getElementById("result1").innerHTML="<h1>"+str+ "</h1>";
+	/*div 태그 사이에 html 태그 사용하여 출력  */
+	document.getElementById("result2").innerText=str;
+	/* div 태그 사이에 문자열로 출력  */	
+	
+	}
+</script>
+</head>
+<body>
+	좋아하는 &nbsp;&nbsp;&nbsp; 과일선택하기 <br>
+	사과<input type="checkbox" class="fruits" name="fruits" value="apple"> <br> 
+	오렌지<input type="checkbox" class="fruits" name="fruits" value="oragne"> <br> 
+	바나나<input type="checkbox" class="fruits" name="fruits" value="banana"> <br>
+	<button onclick="xxx()"> 결과보기 </button>
+	<div id="result1"> </div> 
+	<div id="result2"> </div><!-- div,span:document.getElenmentbyID.innerText="문자열" -->
+	<!--문자열로 출력  --> 
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- 유틸리티 함수 함수 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1. 경고창
+/* 		alert("경고문....");
+		console.log("============"); */
+		
+		
+		function bbb() {
+			alert("bbb");
+		}
+		
+		/*
+		function aaa() {
+			alert("aaa");
+		}
+		aaa(); */
+		
+		
+		////2. setTimeout
+		//1)3초후 alert
+		/*
+		setTimeout(function(){
+			alert("bbb")
+		},4000);
+		
+		//2)3초후 bbb함수 실행 
+		setTimeout(bbb,3000); 
+		
+		//3)다른방식
+		setTimeout(() => {
+			bbb();//이런식으로도 가능함
+		}, 1000); */
+		
+		
+		////3. setInterval: 함수, 시간을 설정해 지정된 시간이 흐른뒤에 반복적으로 함수 호출
+		
+		var kkk=setInterval(function(){
+			console.log("setInterval")
+			}, 3000);
+		
+		setTimeout(function(){//5초뒤에 인터벌 삭제
+			clearInterval(kkk);
+			console.log("clear===");
+		},3000)
+		
+	
+	</script>
+
+</body>
+</html>

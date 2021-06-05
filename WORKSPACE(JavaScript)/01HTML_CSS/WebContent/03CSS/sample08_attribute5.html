@@ -1,0 +1,24 @@
+<!--속성 선택자 실습: [속성*=값]활용  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+a[href*="naver"] { /* a태그의 href속성에 naver라는 글자가 포함되는 (*= →) */  
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<a href="http://naver.com"> one</a><br/>
+	<a href="https://naver.com" target="_blank">two</a><br/>
+    <a href="https://daum.net">three</a><br/>
+    <a href="http://daum.net" target="_blank">four</a><br/>
+
+
+
+
+</body>
+</html>

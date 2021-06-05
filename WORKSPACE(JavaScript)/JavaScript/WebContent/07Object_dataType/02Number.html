@@ -1,0 +1,33 @@
+<!--수치열 데이터 작성 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//수치열 데이터 작성
+	//1. new 
+	var n = new Number(10);
+	
+	//2. 리터럴
+    // valueOf()는 정수값으로 리턴
+    // toString()는 문자열로 리턴
+    var n2 = 10;
+    console.log(n.valueOf(), n2, n.toString());
+    
+    var x=5.7354;
+    console.log(x.toFixed(2));//반올림 +소수점 2자리까지
+    console.log(x.toFixed());// 반올림+ 정수
+    console.log(x.toFixed(10));// 10자리
+    
+    //NaN
+    var xyz =parseInt("aaa");
+    console.log(xyz);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

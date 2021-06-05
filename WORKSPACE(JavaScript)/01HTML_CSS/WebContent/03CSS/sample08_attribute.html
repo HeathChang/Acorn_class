@@ -1,0 +1,26 @@
+<!--속성 선택자 실습: 태그[속성] -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h3[id] { /* []을 사용해 속성이름을 선택 */ 
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<h1 id="one">홍길동</h1> <!-- h3 태그가 아니므로, 선택 안됨 -->
+	<h2>이순신</h2>
+	<h3 id="two">유관순</h3>
+	<h3 >유관순</h3> <!--h3중 id 태그를 가진 애만 선택됨으로, 선택 안됨  -->
+	<h2>강간참</h2>
+	<h2>윤봉길</h2>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!--overflow: 내부의 요소가 부모의 범위를 벗어날때 어떻게 처리할 지 지정하는 속성 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 200px;
+	height: 50px;
+	background-color: #eee;
+	overflow: visible; /* 벗어나도 보이기 */
+	overflow: hidden; /* 벗어나면 감축; */
+	overflow: scroll; /* 벗어나든, 안벗어나든 scroll 만들기 */
+	overflow: auto;   /* 벗어날시, scroll 생성 */
+	
+}
+</style>
+
+</head>
+<body>
+	<h2>CSS overflow</h2>
+	<p>CSS overflowCSS overflowCSS overflowCSS overflowCSS overflowCSS
+		overflowCSS overflowCSS overflowCSS overflowCSS overflowCSS
+		overflowCSS overflow</p>
+	<div>It is a truth universally acknowledged, that a single man in
+		possession of a good fortune, must be in want of a wife. However
+		little known the feelings or views of such a man may be on his first
+		entering a neighbourhood, this truth is so well fixed in the minds of
+		the surrounding families, that he is considered the rightful property
+		of some one or other of their daughters.</div>
+
+</body>
+</html>

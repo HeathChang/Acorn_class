@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	아이디
+	<input type="text" id="xxx" name="userid" class="kkk" value="zzz">
+	<br>
+	비밀번호
+	<input type="password" id="yyy" name="passwd" class="kkk" value="xx">
+	<br>
+	<button onClick="login()">로그인</button>
+	
+	<script type="text/javascript">
+		function login() {
+			
+			//body로 직접 접근 가능
+			var body= document.body;
+			console.log("body>>",body);
+			var classes=document.getElementsByClassName("kkk"); //class이름을 사용- 이름만 기재: 배열에 저장됨, 배열방 번호로 접근 가능 
+			console.log("classes>>",classes);
+			console.log("classes[0]>>",classes[0]);
+			
+			//input 태그명을 접근
+			var inputs= document.getElementsByTagName("input"); //태그명 input
+			console.log("inputs>>",inputs); //여러개의 배열로 관리됨 
+			var id= inputs[0];
+			console.log("input[0].value>>",inputs[0].value);//zzz
+			console.log(">>",id.type,inputs[0].name); //이렇게 두개를 쓸 수 있음.
+			console.log("id.value>>",id.value);//zzz
+			var pw= inputs[1];
+			console.log("input[1].value>>",inputs[1].value);//xx
+			console.log("pw.value>>",pw.value); //xx
+			
+			//태그 name 속성명 이용
+			var xx = document.getElementsByName("userid")//userid로 접근
+			console.log(xx); //	<input type="text" id="xxx" name="userid" class="kkk" value="zzz">
+
+			//id 속성으로 접근
+			var id2= document.getElementById("xxx"); //# 사용 X; id가 잘못될시, null로 뜸
+			//	<input type="text" id="xxx" name="userid" class="kkk" value="zzz">
+			console.log(id2);
+			var pw2= document.getElementById("yyy"); //<input type="password" id="yyy" name="passwd" class="kkk" value="xx">
+			console.log(pw2);
+			
+			console.log(id2.value,pw2.value); 
+			console.log("Id(xxx).value>>",document.getElementById("xxx").value);
+			document.getElementById("xxx").value="~~~~~~~~~~~~~";
+		
+		}
+		login();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

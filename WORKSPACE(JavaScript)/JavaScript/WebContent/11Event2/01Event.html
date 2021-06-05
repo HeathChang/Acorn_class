@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    //인라인 방식
+    function init(){
+    	console.log("모든 html이 모두 DOM으로 생성된후 실행");
+    }
+    
+    /////////////////////////
+    function xxx(){
+    	console.log("click    xxx() 호출");
+    }
+    function yyy(){
+    	console.log("onmouseover");
+    }
+    function zzz(){
+    	console.log("onmouseout");
+    }
+    
+    ////////////////////////////////////////
+    function kkk(v){
+    	console.log("키보드가 up", v);
+    }
+    //////////////////////////////////
+    function xyz(e){ //event를 매개변수로 받음 
+    	console.log(e , e.screenX, e.screenY);//발생된 event 정보들을 출력 
+    }
+</script>
+</head>
+<body onload="init()"><!-- 인라인 방식 이벤트 처리 , 화면 로딩 후  -->
+ <button onclick="xxx()" onmouseover="yyy()" onmouseout="zzz()">클릭</button> 
+ <!--  인라인 방식처리  click, mouseover, mouseout -->
+ <input type="text" name="userid" onkeyup="kkk(this.value)"><!-- 써진 글씨 넘김 -->
+   <!-- 인라인 방식 처리 ,  keyup , this : 이벤트발생된 태그 -->
+  <button onclick="xyz(event)">이벤트 정보</button>
+ <!-- 인라인 방식 처리 발생한 event객체를 매개변수로 넘김 - event 발생이벤트 정보, 이벤트 정지 -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

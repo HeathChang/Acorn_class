@@ -1,0 +1,60 @@
+<!--html의 클래스 이름 및 태그를 갖고 오기 위해서 querySelector 을 많이 사용  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var itemList=[];//배열 전역변수로 선언
+
+	window.onload= function(){
+		var addBtr=document.querySelector("#add");
+		addBtr.addEventListener("click",addList); //add클릭스 addList 함수 호출
+	}
+	
+	function addList(){
+		var item=document.querySelector("#item").value;
+		if(item!=null){
+			itemList.push(item);
+			document.querySelector("#item").value=""; //텍스트박스 공백  (하나치고, 비워주기)
+			document.querySelector("#item").focus(); // 포커스(하나치고, 다시 치기위해서 )
+			
+		}
+		
+	showList();
+	console.log(itemList);
+		
+	}
+	
+	
+	function showList(){
+		var list="<ul>";
+		for (var i = 0; i < itemList.length; i++) {
+			console.log("itemList[i]>>",itemList[i],"itemList.length>>",itemList.length);
+			list+= "<li>"+itemList[i]+"&nbsp;<span class='close' id="+i+">X</span></li>"; //li 반복 누적
+		} //계속 반복 길이만큼
+		list+="</ul>";
+		console.log(list);
+		document.querySelector("#itemList").innerHTML=list;
+		var remove=document.querySelectorAll(".close"); //class이름이 .close인 애들을 선택, span태그 선택
+		console.log("remove>>",remove.length);
+		for (var i = 0; i < remove.length; i++) { //선택한 span태그
+			remove[i].addEventListener("click",removeList);  //각 span에 Listener 달기ㅡremoveList 함수 호출
+		}//삭제를 위한 이벤ㅌ으 리스너, 함수등록 끝. 
+		
+		function removeList(){
+			var id= this.getAttribute("id") //현재 이벤트 발생된 span 태그 id를 가져옴: index 값
+			console.log("remove List id>>",id);
+			itemList.splice(id,1); //id번호중 한개 삭제
+			showList(); //리스트 보이기
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<input type="text" id="item" autofocus="true">  <!-- text 넣는곳 -->
+	<button type="button" id="add" class="button">추가</button> <!-- 버튼 -->
+	<div id="itemList"> </div> <!--결과값 찍기  -->
+</body>
+</html>

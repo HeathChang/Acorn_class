@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//변수 선언과 동시에 초기화: 타입선언 필요없음 Var로 선언
+		var name = "홍길동";
+		var age = 20;
+		var array = [ 1, 2, 3, 4 ];// 배열의 JSON
+		var obj = {
+			"username" : "Lee",
+			"age" : 54
+		}; //객체의 JSON
+		var result = true; //boolean
+		var xxx; //undefined
+		var kkk = null; //null
+		var zzz = function() {
+		}; //함수 객체 
+		
+		var newobj = new String([1,2,3,4]);
+		console.log(newobj)
+		console.log("new line")
+		//
+		var xyz = parseInt("123"); //자바에서 Interger.parserInt(문자열) = 자바스크립트 parseInt(문자열)
+
+		console.log(typeof name);
+		console.log(typeof age);
+		console.log(typeof array);
+		////
+		console.log(typeof obj);
+		console.log(typeof result);
+		console.log(typeof xxx);
+		console.log(typeof kkk);//null 은 obj
+		console.log(typeof zzz);
+		console.log(typeof xyz);
+		////
+		console.log(typeof name=="string"); //string //true
+		console.log(typeof age=="number"); //number true
+		console.log(typeof array=="object");
+		///
+		console.log(obj+typeof obj=='object'); 
+		console.log(typeof result=='boolean');
+		console.log(typeof xxx=='undefined');
+		console.log(typeof kkk=='object');
+		console.log(typeof kkk=='null'); //null로는 못잡음
+		console.log(typeof zzz=='function');
+		console.log(typeof xyz=='number');
+
+		
+		
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- 유틸리티 함수 함수 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var k=function(){
+		var d =10;
+		var k2=function(){
+			return d*2; //중첩함수에서 내부함수의 변수를 사용
+		}
+		return k2();
+	}
+		console.log("k() 호출: "+k()); //20
+	</script>
+
+</body>
+</html>

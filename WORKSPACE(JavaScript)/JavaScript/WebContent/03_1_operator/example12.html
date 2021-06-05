@@ -1,0 +1,30 @@
+<!--3항 연산자+alert-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	alert("Hello"); //경고창 뜬 후, 코드 진행이 멈춤 이후 , 경고창 클릭시 이후 코드 실행
+	document.write("Hello :)");
+	var k = (4 > 5) ? 100 : 200;
+	console.log("k: " + k);
+	var k2 = (4 > 5) ? alert(1) : alert(2); //alert(2) 출력
+	console.log("k2: " + k2); //undefined: 경고창을 띄우기만 하는 것이지, 저장은 아님.	
+	var k3 = (4 > 5) ? (alert(1),100) : (alert(2),200); //alert(2) 출력되고, 200이 k에 저장
+	console.log("k3: " + k3); //k3=200
+	var k4 = ("200") ? 100 : 200; 
+	console.log("k4: " + k4); 
+	
+	
+	console.log(k+"\t"+k2+"\t"+k3+"\t"+k4)
+	
+	
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr=["a.jpg","b.jpg","c.jpg"]
+	var i=0;
+	function before(){
+		var img=document.getElementById("flag");
+		--i;
+		if(i<0){
+			i=2;
+		}
+		img.src="../image/"+arr[i];//img 태그 src 속성 변경
+	}
+	function after(){
+		var img=document.getElementById("flag");
+		++i;
+		if(i>=3){
+			i=0;
+		}
+		img.src="../image/"+arr[i];//img 태그 src 속성 변경
+	}
+</script>
+</head>
+<body>
+	<img src="../image/a.jpg" width="200" height="200" id="flag">
+	<button onclick="before()">전 </button>
+	<button onclick="after()">후 </button>
+</body>
+</html>

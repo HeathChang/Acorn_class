@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	아이디
+	<input type="text" name="userid" value="zzz">
+	<br>
+	비밀번호
+	<input type="password" name="passwd" value="xx">
+	<br>
+	<button onClick="login()">로그인</button>
+	<script type="text/javascript">
+		function login() {
+
+			var body = document.childNodes[1].lastChild //body고름
+			//var id = body.firstChild;
+			console.log(body);
+			var id = body.firstChild.nextSibling; //id라는 firstchild. nextSibiling: input 태그 
+			console.log(">id>>",id);
+			console.log(">>",id.type, id.name, id.value); //text && userid && zzz
+			id.value = "hello"; //zzz → 'hello' 변경
+			console.log(">id.value>",id.value);
+			var pw = id.nextSibling.nextSibling.nextSibling; // input type = password
+			
+			console.log(">pw>",pw);
+			console.log(pw.type, pw.name, pw.value);
+
+		}
+		//login();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

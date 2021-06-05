@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+</head>
+<body>
+
+	값1
+	<input type="text" name="val1" id="v1">
+	<br> 
+	값2
+	<input type="text" name="val2" id="v2">
+	<br>
+	<button onclick="calc('+')">+</button>
+	<button onclick="calc('-')">-</button>
+	<button onclick="calc('*')">*</button>
+	<button onclick="calc('/')">/</button>
+	<br> 결과값
+	<input type="text" name="resultval" id="result">
+
+	<a href="javascript:hreftest('www.daum.net')"> 다음으로 이동 </a>
+
+	<script type="text/javascript">
+		function calc(n) {
+			var v1 = document.getElementById("v1").value;
+			var v2 = document.getElementById("v2").value;
+			var result = document.getElementById("result");
+			switch (n) {
+			case '+':
+				console.log(n);
+				result.value = parseInt(v1) + parseInt(v2);
+				break;
+			case '-':
+				result.value = parseInt(v1) - parseInt(v2);
+				break;
+			case '*':
+				console.log(n);
+				result.value = parseInt(v1) * parseInt(v2);
+				break;
+			case '/':
+				console.log(n);
+				result.value = parseInt(v1) / parseInt(v2);
+				break;
+
+			}
+
+		}
+		
+		function hreftest(n){
+			console.log("=====",n);
+			setTimeout(() => {
+				location.href="http://"+n;
+			}, 3000);
+			console.log("=====",n);
+
+		}
+		
+		
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!-- z index를 사용하여 이미지 투과하기 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+	position: absolute; /* relative가 없을시, body를 부모로 잡음 */
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+	}
+
+</style>
+</head>
+<body>
+	<h1>This is a heading</h1>
+	<img src="../images/001.png" width="100" height="140">
+	<p>
+	Because the image has a z-index of -1; it will be placed behind the text
+	</p>
+
+</body>
+</html>

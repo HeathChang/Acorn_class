@@ -1,0 +1,32 @@
+<!--자신에서 생긴게 부모로 못가게 막기  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+		var a= document.getElementById("a");
+		var b= document.getElementById("b");
+		
+		//정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정합니다: click이라는 함수가 전달될때마다, function
+		a.addEventListener("click", function() {
+			console.log("a");
+		}, false)
+		b.addEventListener("click", function(e) { //event 매개변수로 받음
+			console.log("b");
+			e.stopPropagation();//이벤트 전파 방지; b만 출력이 된다. 
+		}, false)
+		
+	}
+</script>
+</head>
+<body>
+	<div id="a" style="background-color: #ff0000">
+		a
+		<div id="b" style="background-color: #00ff00">
+			b
+		</div>
+	</div>
+</body>
+</html>

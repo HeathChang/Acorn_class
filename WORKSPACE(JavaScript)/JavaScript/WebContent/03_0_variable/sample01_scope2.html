@@ -1,0 +1,30 @@
+<!--전역 scope 사용-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = 10;
+		function xxx(){
+			var b =20;
+			c =30; // window 객체의 속성으로 추가 but 권장 X
+			console.log("xxx(): ", a);
+			console.log(c);
+			//var를 지정하지않으면 전역 scope에 동적으로 변수가 가 정의. 즉, 변수가 정의도는 것은 파싱단계가 아닌, 런타임에 동적 정의됨. 
+		}
+		xxx();
+		//console.log(b); // 함수 안에서 선언된 함수는 사용 불가 
+		console.log("a: ",a);
+		console.log("c: ",c);
+		
+		
+		
+		
+	</script>
+
+
+</body>
+</html>

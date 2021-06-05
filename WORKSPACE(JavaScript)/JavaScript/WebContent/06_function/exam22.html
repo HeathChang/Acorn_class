@@ -1,0 +1,26 @@
+<!-- 유틸리티 함수 함수 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//중첩함수: 익명함수 사용
+	var a =function (arg) {
+		var b =function(n){
+			return n*100
+		}
+		return b(arg);// b변수의 익명함수 호출 리턴값을 사용
+	}
+	
+	
+	//외부 접근방법
+	var result=a(2);
+	console.log(result);
+	
+	</script>
+
+</body>
+</html>
