@@ -1,0 +1,8 @@
+<p>{{ getTitleName() }}{{ books.length }}권</p>
+<ul>
+  <li *ngFor="let book of books">
+    <!--directive tag-->
+    <img src="../../assets/image/{{ book.img }}" width="100" height="100" />
+    {{ book.name }}
+  </li>
+</ul>
