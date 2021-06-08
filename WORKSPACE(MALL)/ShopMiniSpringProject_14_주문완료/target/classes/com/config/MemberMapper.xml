@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	  phone2=#{phone2},
  	  phone3=#{phone3},
  	  email1=#{email1},
- 	  email2=#{email2}
+ 	  email2=#{email2} 
  	where userid=#{userid} 	
  </update>
 

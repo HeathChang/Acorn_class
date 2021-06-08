@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = '이벤트 바인딩 실습예제2';
+  flag=true
+  handleEvent(flag:boolean){
+
+  }
 }
