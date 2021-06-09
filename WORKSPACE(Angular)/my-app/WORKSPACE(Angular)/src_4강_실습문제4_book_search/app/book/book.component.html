@@ -1,0 +1,8 @@
+<p>{{getTitleName()}}{{books.length}}권</p>
+검색어입력<input type="text" (keyup)="searchName($event)"><br>
+<ul>
+    <li *ngFor="let book of booksResult">
+        <img src="../../assets/image/{{book.img}}" width="100" height="100">
+        {{book.name}}
+    </li>
+</ul>

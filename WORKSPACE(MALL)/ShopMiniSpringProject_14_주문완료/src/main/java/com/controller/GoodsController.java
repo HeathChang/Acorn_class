@@ -92,6 +92,7 @@ public class GoodsController {
 		return "redirect:../goodsRetrieve?gCode="+cart.getgCode();
 	}
 	
+	
 	@RequestMapping("/goodsRetrieve")//goodsRetrieve.jsp
 	@ModelAttribute("goodsRetrieve") //key값
 	public GoodsDTO goodsRetrieve(@RequestParam("gCode") String gCode) {
