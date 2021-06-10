@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {Input} from "@angular/core";
+import {Input} from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
+
 export class ChildComponent implements OnInit {
-  title="부모컴포넌트에서 데이터 전달"
-  @Input() frineds:string[]=[];
+  @Input() send_data:string=""; //부모에서 전송되는 데이터
+  //부모에서 전송되는 데이터
+  prev_num: number=0; //부모에서 직접 사용되는 데이터
+  cur_num: number=0;
 
   constructor() { }
-  @Input() friends: any;
+
   ngOnInit(): void {
   }
 

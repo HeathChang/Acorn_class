@@ -1,0 +1,8 @@
+<h1>부모컴포넌트</h1>
+<h2>부모컴포넌트에서 자식에게 데이터 전달</h2>
+<button (click)="clear()">자식Clear</button> <br />
+<button (click)="send()">전송</button> <br />
+
+<app-child #kkk [send_data]="data"></app-child>
+<!-- 자식에게 send_data키로 데이터 전송-->
+<!--@ViewCHild("kkk") child:childComponetn;로 지정-->

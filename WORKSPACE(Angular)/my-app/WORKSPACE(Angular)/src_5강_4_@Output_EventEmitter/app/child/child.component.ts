@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Input} from "@angular/core";//////////
+import {Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,11 +7,12 @@ import {Input} from "@angular/core";//////////
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  title="부모컴포넌트에서 데이터 전달";
-   @Input() username=""; //string
-   @Input() userage="";  //string
-  constructor( ) {  
-   }
+  @Output() customEvent = new EventEmitter(); //키 값으로 사용
+  send(name:string){
+    this.customEvent.emit(name); //부모에게 데이터 전달
+  }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
