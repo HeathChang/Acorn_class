@@ -2,7 +2,7 @@
 <p>{{ title }}{{ bookList.length }}권</p>
 <ul>
   <li *ngFor="let book of bookList">
-    <img src="../../assets/image/{{ book.img }}" width="100" height="100" />
+    <img src="../../assets/image/{{ book.img }}" (click)="send(book.name)" />
     {{ book.name }}
   </li>
 </ul>

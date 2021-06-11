@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Input } from '@angular/core';
 import {Book} from './book';
+import {EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -11,7 +12,10 @@ import {Book} from './book';
 export class BookComponent implements OnInit {
   @Input() bookList:Book[]=[];
   @Input() title:string="";
-
+  @Output() customEvent =new EventEmitter();
+  send(m:string){
+    this.customEvent.emit(m);
+  }
   constructor() { }
 
   ngOnInit(): void {

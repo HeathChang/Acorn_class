@@ -1,0 +1,17 @@
+<p>{{ title }}</p>
+<app-child (customEvent)="handleEvent($event)"> </app-child>
+<table border="1">
+  <tr>
+    <td>주식명</td>
+    <td></td>
+    <td>주식 가격</td>
+    <td></td>
+  </tr>
+
+  <tr *ngFor="let stock of stocks">
+    <td>{{ stock.stockSymbol }}</td>
+    <td></td>
+    <td>{{ stock.stockPrice }}</td>
+    <td></td>
+  </tr>
+</table>

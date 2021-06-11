@@ -1,0 +1,8 @@
+<p>자식의 주식 등록 화면</p>
+<div>
+  주식명: <input type="text" #name /> <br />
+  주식가격: <input type="text" #price /> <br />
+</div>
+<button (click)="add({ stockSymbol: name.value, stockPrice: price.value })">
+  stocks 저장
+</button>
