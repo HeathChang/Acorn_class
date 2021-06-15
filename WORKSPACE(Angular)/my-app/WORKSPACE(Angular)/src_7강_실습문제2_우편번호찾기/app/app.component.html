@@ -1,0 +1,12 @@
+<h1>select태그의 option값을 설정</h1>
+
+카테고리 1:
+<select (change)="select(xxx.value)" #xxx>
+  <option *ngFor="let x of category1">{{ x }}</option>
+</select>
+<br />
+카테고리 2:
+<select>
+  <option *ngFor="let x of result">{{ x }}</option>
+</select>
+<br />
