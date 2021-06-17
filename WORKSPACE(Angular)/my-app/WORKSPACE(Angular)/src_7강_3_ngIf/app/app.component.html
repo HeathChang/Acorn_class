@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<h2>논리값의 명시적 지정</h2>
+<p *ngIf=true>Hello1 true</p>
+<p *ngIf=false>Hello2 false</p>
+<p *ngIf="true">Hello3 "true"</p>
+<p *ngIf="false">Hello4 "false"</p>
+<h2>속성바인딩지정</h2>
+<p *ngIf="result_true">world1</p>
+<p *ngIf=!result_true>world2</p>
+<p *ngIf=!result_0>world3</p><!-- 1 -->
+<p *ngIf=result_0>world4</p><!-- 0 -->
+<p *ngIf="result_10==10">world5</p><!-- true -->
